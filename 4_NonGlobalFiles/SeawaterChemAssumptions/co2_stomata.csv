@@ -1,0 +1,268 @@
+﻿AgeDescription,Age,AgeLower,AgeUpper,CO2, CO2Low1s, CO2High1s,Source,Site,Latitude,Longitude,Notes,doi
+OAE2; well constrained section (all during Cenomanian),93.868,,,436.2,305.34,719.73,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),93.936,,,431.05,301.735,711.2325,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),93.955,,,369.65,258.755,609.9225,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.012,,,465.85,326.095,768.6525,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.033,,,424.9,297.43,701.085,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.046,,,485.3,339.71,800.745,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.066,,,507.85,355.495,837.9525,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.09,,,446.45,312.515,736.6425,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.09,,,396.25,277.375,653.8125,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.09,,,448.45,313.915,739.9425,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.1,,,360.4,252.28,594.66,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.14,,,456.65,319.655,753.4725,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.21,,,444.35,311.045,733.1775,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.28,,,409.55,286.685,675.7575,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.31,,,384,268.8,633.6,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.37,,,380.9,266.63,628.485,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+OAE2; well constrained section (all during Cenomanian),94.52,,,365.55,255.885,603.1575,Barclay2010,Dakota Formation,,,,https://doi.org/10.1038/ngeo757
+Middle Jurassic,168.4,168.3,167.7,815.8260234,543.8840156,1087.768031,"Beerling and Royer, 2002",Beerling02b,,,,https://doi.org/10.1146/annurev.earth.30.091201.141413
+Middle Jurassic,168.8,168.3,167.7,879.2410714,586.1607143,1172.321429,"Beerling et al., 1998",Ravenscar Group,,,,https://doi.org/10.1093/jxb/49.326.1603
+Lower Jurassic (Hettangian),200.41,201.36,199.46,863.8157895,575.877193,1151.754386,"Beerling et al., 1998",Ravenscar Group,,,,https://doi.org/10.1093/jxb/49.326.1603
+Upper Triassic (Rhaetian),203.55,205.74,201.36,757.5,505,1010,"Beerling et al., 1998",Ravenscar Group,,,,https://doi.org/10.1093/jxb/49.326.1603
+Upper Triassic (Rhaetian),203.55,205.74,201.36,834.5338983,556.3559322,1112.711864,"Beerling et al., 1998",Ravenscar Group,,,,https://doi.org/10.1093/jxb/49.326.1603
+"early Paleocene (Kvacek et al., 1994); Basilika site",63.8,66,61.6,366.855,337.1372,570.699,"Beerling et al., 2002 (updated by Beerling et al., 2009)",Basilika,,,,https://doi.org/10.1073/pnas.122573099
+"radiometric dating (Raynolds et al., 2001, p. 21); DMNH 2360",64.13,64.34,63.92,330.324,321.3395,401.106,"Beerling et al., 2002 (updated by Beerling et al., 2009)",Dawson Formation,,,,https://doi.org/10.1073/pnas.122573099
+"Puercan (Wing et al., 1995); LJH 7659",65.375,66,64.75,343.159,329.3347,541.0156,"Beerling et al., 2002 (updated by Beerling et al., 2009)",Fort Union Formation,,,,https://doi.org/10.1073/pnas.122573099
+"Puercan (Wing et al., 1995); LJH 7423",65.375,66,64.75,469.53,370.011,641.916,"Beerling et al., 2002 (updated by Beerling et al., 2009)",Fort Union Formation,,,,https://doi.org/10.1073/pnas.122573099
+"35.2 m below the KTB; HCIIa floral zone; ~0.5 Myrs before KTB (Hicks et al., 2002); DMNH 566",66.5,67,66,538.646,399.7317,686.8136,"Beerling et al., 2002 (updated by Beerling et al., 2009)",Hell Creek Formation,,,,https://doi.org/10.1073/pnas.122573099
+Kazanian,270.55,272.3,268.8,343,240.1,565.95,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Kazanian,270.55,272.3,268.8,266,186.2,438.9,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Kazanian,270.55,272.3,268.8,290,203,478.5,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Kazanian,270.55,272.3,268.8,326,228.2,537.9,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Kazanian,270.55,272.3,268.8,342,239.4,564.3,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,348,243.6,574.2,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,351,245.7,579.15,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,336,235.2,554.4,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,308,215.6,508.2,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,350,245,577.5,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,366,256.2,603.9,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,368,257.6,607.2,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,358,250.6,590.7,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,303,212.1,499.95,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,367,256.9,605.55,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,350,245,577.5,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,401,280.7,661.65,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,287,200.9,473.55,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,311,217.7,513.15,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,284,198.8,468.6,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Westphalian,313.5,319,308,325,227.5,536.25,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Namurian,324,329,319,385,269.5,635.25,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Namurian,324,329,319,392,274.4,646.8,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+Namurian,324,329,319,359,251.3,592.35,"Beerling, 2002",Beerling02,,,,https://doi.org/10.1073/pnas.202304999
+middle to late Rhaetian,203.55,205.74,201.36,2200,1650,2750,"Bonis et al., 2010",Wustenwelsberg Quarry,,,,https://doi.org/10.1016/j.palaeo.2010.05.034
+Early Cretaceous (Valanginian-Hauterivian),132.1,137.7,126.5,1448.161765,965.4411765,1930.882353,"Chen et al., 2001",Huolinhe Formation,,,,https://doi.org/10.2307/3558342
+early Middle Jurassic,172.2,174.7,170.3,1893.75,1262.5,2525,"Chen et al., 2001",Yima Formation,,,,https://doi.org/10.2307/3558342
+Early Jurassic,188.03,201.36,174.7,734.8880597,489.9253731,979.8507463,"Chen et al., 2001",Dzungaria Formation,,,,https://doi.org/10.2307/3558342
+radiometric dating,38.4,40.9,35.9,634,353,,"Doria et al., 2011",Giraffe Pipe,,,,https://doi.org/10.2475/01.2011.03
+radiometric dating,112.6,115.2,110,856.4166667,570.8333333,1142,"Du et al, 2016",Hanxia Section,,,,https://doi.org/10.1016/j.cretres.2015.07.020
+radiometric dating,112.6,115.2,110,846.0833333,564.1666667,1128,"Du et al, 2016",Hanxia Section,,,,https://doi.org/10.1016/j.cretres.2015.07.020
+"biostratigraphy (late Aptian - early Albian); also, radiometric constraint from same formation of 115 +/- 4.5 Ma",116.2,121.4,111,795.5,531,1060,"Du et al, 2016",Hanxia Section,,,,https://doi.org/10.1016/j.cretres.2015.07.020
+radiometric dating,120.95,125.1,116.8,823.5833333,549.1666667,1098,"Du et al, 2016",Hanxia Section,,,,https://doi.org/10.1016/j.cretres.2015.07.020
+radiometric dating,120.95,123,119,839.0833333,559.1666667,1119,"Du et al, 2016",Hanxia Section,,,,https://doi.org/10.1016/j.cretres.2015.07.020
+NP23 zone,30.75,32,29.5,671,503,839,"Erdei et al., 2012",Hungary,,,,
+Miocene to Pliocene,12.81,23.04,2.58,434,339.705499,560.0714465,"Franks et al., 2014",PoleKunzmann,,,,https://doi.org/10.1002/2014GL060457
+Oligocene to early Miocene [Hill 1990 material],24.945,33.9,15.99,389,282.8225742,549.1214892,"Franks et al., 2014",Hill1990,,,,https://doi.org/10.1002/2014GL060457
+middle to late Eocene [Greenwood 1987 material],40.85,47.8,33.9,356,260.9662411,486.3580852,"Franks et al., 2014",Greenwood87,,,,https://doi.org/10.1002/2014GL060457
+late Early Eocene to basal Middle Eocene (upper P7 to basal P10) [Carpenter et al 2004 material],48,52,44,636.3960006,575.5157355,708.4251583,"Franks et al., 2014",Carpenter04,,,,https://doi.org/10.1002/2014GL060457
+Albian,106.85,113.2,100.5,828,651.0114454,1070.418958,"Franks et al., 2014",Srinivasan95,,,,https://doi.org/10.1002/2014GL060457
+Albian,106.85,113.2,100.5,662,523.401952,860.8642206,"Franks et al., 2014",Cantrill92,,,,https://doi.org/10.1002/2014GL060457
+latest Albian to earliest Cenomanian [Pole 2000 material] and lower to middle Albian [Gomez 2002 material],106.85,113.2,100.5,734,579.6960635,948.0829258,"Franks et al., 2014",Pole2000,,,,https://doi.org/10.1002/2014GL060457
+early Hauterivian to early Barremian [Villar de Seoane 2001 material],131.075,132.6,129.55,513,369.9127663,736.2145153,"Franks et al., 2014",deSeoane01,,,,https://doi.org/10.1002/2014GL060457
+Late Triassic [Bomfleur and Kerp 2010 material],219.18,237,201.36,889,685.248742,1202.621917,"Franks et al., 2014",Bomfleur10,,,,https://doi.org/10.1002/2014GL060457
+Carnian to early Norian,226.76,237,216.52,615,441.3656761,877.3833768,"Franks et al., 2014",Franks14,,,,https://doi.org/10.1002/2014GL060457
+overlap between Artinskian and Leonardian [Krings et al 2005 material]  / late early Permian [Yao et al 2000 material],277.15,282,272.3,498,363.5124236,706.7245905,"Franks et al., 2014",Yao2000,,,,https://doi.org/10.1002/2014GL060457
+Upper Carboniferous [Thomas 1965 material] and Bolsovian [Shute and Cleal 2002 material],311.05,323.2,298.9,340,236.81033,488.0181711,"Franks et al., 2014",Thomas65,,,,https://doi.org/10.1002/2014GL060457
+Westphalian A & B [Thomas 1967 material] and Lower Coal Measures (Langsettian) [Hamshaw Thomas 1912 material],316.5,318,315,388,272.1263262,566.5354987,"Franks et al., 2014",Thomas67,,,,https://doi.org/10.1002/2014GL060457
+Lower Coal Measures (Langsettian) [Graham 1935 material],317.5,318,317,332,239.3051726,470.5402899,"Franks et al., 2014",Graham35,,,,https://doi.org/10.1002/2014GL060457
+Pragian [Edwards et al 1998 material],411.45,412.4,410.5,1548,1091.630805,2540.329186,"Franks et al., 2014",Edwards98,,,,https://doi.org/10.1002/2014GL060457
+late Early Eocene,49.9,52,47.8,658.5,439,878,"Greenwood et al., 2003",Greenwood03,,,,https://doi.org/10.1016/S0031-0182(03)00465-6
+"radiometric dating (Mertz & Renne, 2005)",47.4,48,46.8,943,853,1033,"Grein et al., 2011",Messel Formation,,,,
+[multiple arguments],24,25.25,23,434,257,611,"Grein et al., 2013 (updates Roth-Nebelsick et al., 2004, 2012)",SaxonyStyria,,,,https://doi.org/10.1016/j.palaeo.2012.12.025
+[multiple arguments],27,27.1,26.3,394.5,273,516,"Grein et al., 2013 (updates Roth-Nebelsick et al., 2004, 2012)",SaxonyStyria,,,,https://doi.org/10.1016/j.palaeo.2012.12.025
+[multiple arguments],17.4,17.6,17.2,402,238,566,"Grein et al., 2013 (updates Roth-Nebelsick et al., 2004)",SaxonyStyria,,,,https://doi.org/10.1016/j.palaeo.2012.12.025
+[multiple arguments],25,25.25,23,453,287,619,"Grein et al., 2013 (updates Roth-Nebelsick et al., 2004)",SaxonyStyria,,,,https://doi.org/10.1016/j.palaeo.2012.12.025
+late Albian,103.675,106.85,100.5,710,580,1420,"Haworth et al., 2005",West Brothers,,,,https://doi.org/10.1130/G21736.1
+early-mid Albian,110.025,113.2,106.85,710,603,1400,"Haworth et al., 2005",Puddledock,,,,https://doi.org/10.1130/G21736.1
+mid-late Aptian,115.25,117.3,113.2,700,597,1340,"Haworth et al., 2005",Drewrys Bluff,,,,https://doi.org/10.1130/G21736.1
+mid Aptian,117.3,121.4,113.2,695,590,1380,"Haworth et al., 2005",West Walpen Chine,,,,https://doi.org/10.1130/G21736.1
+early Aptian,119.35,121.4,117.3,630,530,1220,"Haworth et al., 2005",Dutch Gap,,,,https://doi.org/10.1130/G21736.1
+late Barremian,122.675,123.95,121.4,630,530,1250,"Haworth et al., 2005",SW England,,,,https://doi.org/10.1130/G21736.1
+early Barremian,123.95,126.5,121.4,550,450,1130,"Haworth et al., 2005",SW England,,,,https://doi.org/10.1130/G21736.1
+late Hauterivian,128.025,129.55,126.5,620,590,1270,"Haworth et al., 2005",SW England,,,,https://doi.org/10.1130/G21736.1
+early Hauterivian,131.075,132.6,129.55,650,500,1300,"Haworth et al., 2005",SW England,,,,https://doi.org/10.1130/G21736.1
+Late Reuverian,2.775,3,2.55,276,193.2,455.4,"Kürschner et al., 1996",Obel,,,,
+Early Reuverian,3.4,,,330,315,349,"Kürschner et al., 1996",Reuver,,,,
+Late Brunssummian,4,,,362.5,253.75,598.125,"Kürschner et al., 1996",Hambach,,,,
+Middle Brunssummian,4.6,,,270,189,445.5,"Kürschner et al., 1996",Hambach,,,,
+lower Middle Eocene,44.5,47.8,41.2,964.5,643,1286,"Kürschner et al., 2001",K2001,,,,
+Bessarabian,11.56,12.17,10.95,332.159,232.5113,548.06235,"Kürschner et al., 2008",Ruzinci,,,,https://doi.org/10.1073/pnas.0708588105
+Late Badenian,13.885,14.27,13.5,292.511,204.7577,482.64315,"Kürschner et al., 2008",Zukunft-W,,,,https://doi.org/10.1073/pnas.0708588105
+Early Badenian,15.7,16.4,15,449,314.3,740.85,"Kürschner et al., 2008",Ledenice,,,,https://doi.org/10.1073/pnas.0708588105
+Early Badenian,16.48,17.47,15.49,393.28,275.296,648.912,"Kürschner et al., 2008",Lusatia,,,,https://doi.org/10.1073/pnas.0708588105
+Early Badenian,16.8,17.2,16.4,424.67,297.269,700.7055,"Kürschner et al., 2008",K08,,,,https://doi.org/10.1073/pnas.0708588105
+Karpartian,16.95,17.5,16.4,393.282,275.2974,648.9153,"Kürschner et al., 2008",Cheb Eger,,,,https://doi.org/10.1073/pnas.0708588105
+Ottnangian,17.58,17.96,17.2,340.969,238.6783,562.59885,"Kürschner et al., 2008",Oberdorf,,,,https://doi.org/10.1073/pnas.0708588105
+Ottnangian,17.6,18,17.2,374.009,261.8063,617.11485,"Kürschner et al., 2008",Hradek,,,,https://doi.org/10.1073/pnas.0708588105
+Ottnangian,17.6,18,17.2,388.326,271.8282,640.7379,"Kürschner et al., 2008",Wackersdorf,,,,https://doi.org/10.1073/pnas.0708588105
+Eggenburgian,19,19.5,18.5,396.586,277.6102,654.3669,"Kürschner et al., 2008",MR59,,,,https://doi.org/10.1073/pnas.0708588105
+Eggenburgian,19,19.2,18.8,458.811,321.1677,757.03815,"Kürschner et al., 2008",MR59,,,,https://doi.org/10.1073/pnas.0708588105
+Eggenburgian,20,20.3,19.7,332.16,232.512,548.064,"Kürschner et al., 2008",MR59,,,,https://doi.org/10.1073/pnas.0708588105
+Aquitanian,21.745,23.04,20.45,333.26,233.282,549.879,"Kürschner et al., 2008",JZ44,,,,https://doi.org/10.1073/pnas.0708588105
+Late Oligocene,25.165,27.29,23.04,588.216,411.7512,970.5564,"Kürschner et al., 2008",Markvartice,,,,https://doi.org/10.1073/pnas.0708588105
+Late Badenian,13.885,14.27,13.5,287,261.8,301.1,"Kürschner et al., 2008 (updated by Beerling et al., 2009)",Zukunft-W,,,,https://doi.org/10.1073/pnas.0708588105
+Early Badenian,15.7,16.4,15,555,426.2,694.8,"Kürschner et al., 2008 (updated by Beerling et al., 2009)",Horni Briza,,,,https://doi.org/10.1073/pnas.0708588105
+Early Badenian,15.7,16.4,15,552,415.5,693,"Kürschner et al., 2008 (updated by Beerling et al., 2009)",Horni Briza,,,,https://doi.org/10.1073/pnas.0708588105
+Early Badenian,15.79,16.02,15.56,564,414.2,701.4,"Kürschner et al., 2008 (updated by Beerling et al., 2009)",49Camp,,,,https://doi.org/10.1073/pnas.0708588105
+Uintan-Duchesnean NALMA,42.85,47.9,37.8,424,385,467,"Maxbauer et al., 2014",Max14,,,,
+Cenomanian,97.2,100.5,93.9,1027.5,685,1370,"Mays et al, 2015",Mays15,,,,
+just after the T-J extinction,200.65,201.36,200,715.5,477,954,"McElwain et al., 1999",Mc99,,,,https://doi.org/10.1126/science.285.5432.1386
+during the T-J extinction,201.36,201.8,200.8,1534.5,1023,2046,"McElwain et al., 1999",Mc99,,,,https://doi.org/10.1126/science.285.5432.1386
+just before the T-J extinction,201.55,201.8,201.36,702,468,936,"McElwain et al., 1999",Mc99,,,,https://doi.org/10.1126/science.285.5432.1386
+Toarcian OAE,182.5,,,1050,800,1300,"McElwain et al., 2005",Korsodde Section,,,,https://doi.org/10.1038/nature03618
+Toarcian OAE,182.6,,,1550,1200,1900,"McElwain et al., 2005",Korsodde Section,,,,https://doi.org/10.1038/nature03618
+Toarcian OAE,182.7,,,550,400,700,"McElwain et al., 2005",Korsodde Section,,,,https://doi.org/10.1038/nature03618
+Toarcian OAE,182.8,,,950,700,1200,"McElwain et al., 2005",Korsodde Section,,,,https://doi.org/10.1038/nature03618
+Toarcian OAE,182.9,,,950,700,1200,"McElwain et al., 2005",Korsodde Section,,,,https://doi.org/10.1038/nature03618
+Toarcian OAE,183,,,600,500,700,"McElwain et al., 2005",Korsodde Section,,,,https://doi.org/10.1038/nature03618
+Lutetian,44.55,48.07,41.03,768,512,1024,"McElwain, 1998",Mc98,,,,
+Middle Jurassic,168.8,175.6,161.53,639,426,852,"McElwain, 1998",Mc98,,,,
+Early Permian,286.63,298.89,274.37,354,236,472,"McElwain, 1998",Mc98,,,,
+Westphalian B (Late Carboniferous),316.6,318,315.2,261,174,348,"McElwain, 1998",Mc98,,,,
+Siegenian-Emsian (Early Devonian),402.4,410.05,394.3,2281.5,1521,3042,"McElwain, 1998",Mc98,,,,
+late Upper Albian,101.75,103,100.5,973.5,649,1298,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+late Upper Albian,101.75,103,100.5,851.775,567.85,1135.7,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+late Upper Albian,101.75,103,100.5,917.325,611.55,1223.1,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+late Upper Albian,101.75,103,100.5,954,636,1272,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,867.3,578.2,1156.4,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,836.85,557.9,1115.8,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,784.125,522.75,1045.5,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,572.85,381.9,763.8,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,1059.975,706.65,1413.3,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,1059.975,706.65,1413.3,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,867.3,578.2,1156.4,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,592.875,395.25,790.5,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,907.875,605.25,1210.5,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,781.95,521.3,1042.6,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,733.875,489.25,978.5,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+early Upper Aptian,119.35,121.4,117.3,769.35,512.9,1025.8,"Passalia, 2009",Santa Cruz Argentina,,,,https://doi.org/10.1016/j.palaeo.2008.11.010
+Campanian,72.5,83.65,72.17,558.9897328,496.8139353,818.5305691,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,73.1,83.65,72.17,568.424122,508.2621009,836.4242304,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,73.7,83.65,72.17,571.6977253,491.361176,937.957389,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,74.7,83.65,72.17,589.1256258,506.0253705,1020.351351,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,75.4,83.65,72.17,592.8393714,520.4984092,979.3048501,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,75.9,83.65,72.17,695.1100556,558.8475403,3251.462575,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,78.1,83.65,72.17,568.424122,475.2215197,983.6081046,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,79.9,83.65,72.17,581.9335313,496.6369316,1000.97523,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+Campanian,81.5,83.65,72.17,585.4911836,482.5009262,1105.219211,"Quan et al., 2009",Taipinglinchang Formation,,,,https://doi.org/10.1016/j.cretres.2008.08.004
+magnetostratigraphy and radiometric dating; duration within sequence is constrained by varve chronology,22.95,22.99,22.94,425,372,478,"Reichgelt et al., 2016",Reichgelt16,,,,https://doi.org/10.1016/j.epsl.2016.09.026
+magnetostratigraphy and radiometric dating; duration within sequence is constrained by varve chronology,23.02,23.03,23.01,516,405,627,"Reichgelt et al., 2016",Reichgelt16,,,,https://doi.org/10.1016/j.epsl.2016.09.026
+late Zanclean,3.89,4.18,3.6,355.2634375,248.6844063,586.1846719,"Retallack, 2009a",Klarbecken,,,,https://doi.org/10.1130/B26341.1
+late Serravallian,11.9575,12.29,11.625,468.2183083,327.7528158,772.5602087,"Retallack, 2009a",Vegora,,,,https://doi.org/10.1130/B26341.1
+late Priabonian,34.45,35,33.9,672.2222222,448.1481481,896.2962963,"Retallack, 2009a",Zagorsk,,,,https://doi.org/10.1130/B26341.1
+middle Priabonian,35.5,36,35,745.890411,497.260274,994.5205479,"Retallack, 2009a",Krilion,,,,https://doi.org/10.1130/B26341.1
+early Lutetian,46.31,48.07,44.55,907.5,605,1210,"Retallack, 2009a",Noda,,,,https://doi.org/10.1130/B26341.1
+late Aptian,115.25,117.3,113.2,892.6229508,595.0819672,1190.163934,"Retallack, 2009a",Eromanga,,,,https://doi.org/10.1130/B26341.1
+early Aptian,119.35,121.4,117.3,1008.333333,672.2222222,1344.444444,"Retallack, 2009a",Eagles Next,,,,https://doi.org/10.1130/B26341.1
+late Barremian,122.675,123.95,121.4,591.8478261,394.5652174,789.1304348,"Retallack, 2009a",Point Lydia,,,,https://doi.org/10.1130/B26341.1
+mid-Berriasian,140.4,143.1,137.7,812.6865672,541.7910448,1083.58209,"Retallack, 2009a",Florin37,,,,https://doi.org/10.1130/B26341.1
+mid-Berriasian,140.4,143.1,137.7,735.8108108,490.5405405,981.0810811,"Retallack, 2009a",Florin37,,,,https://doi.org/10.1130/B26341.1
+early Berriasian,141.75,143.1,140.4,972.3214286,648.2142857,1296.428571,"Retallack, 2009a",Shahezi,,,,https://doi.org/10.1130/B26341.1
+mid-Tithonian,148,149.24,147,735.8108108,490.5405405,981.0810811,"Retallack, 2009a",Huoshiling,,,,https://doi.org/10.1130/B26341.1
+late Kimmeridgian,150.625,152.01,149.24,938.7931034,625.862069,1251.724138,"Retallack, 2009a",Belt,,,,https://doi.org/10.1130/B26341.1
+late Rhaetian,202.455,203.55,201.36,907.5,605,1210,"Retallack, 2009a",Billesholm,,,,https://doi.org/10.1130/B26341.1
+mid-Carnian,230.5,233,228,812.6865672,541.7910448,1083.58209,"Retallack, 2009a",Lunz,,,,https://doi.org/10.1130/B26341.1
+early Carnian,234.575,237,232.15,789.1304348,526.0869565,1052.173913,"Retallack, 2009a",Russia,,,,https://doi.org/10.1130/B26341.1
+early Carnian,234.575,237,232.15,825,550,1100,"Retallack, 2009a",Russia,,,,https://doi.org/10.1130/B26341.1
+Pragian (Lower Devonian),411.45,412.4,410.5,2836,2505,4561,"Roth & Konrad, 2003",RK03,,,,
+late Eocene,35.85,37.8,33.9,449.5,259,640,"Roth-Nebelsick et al., 2012",RN12,,,,
+Spore Pollen Paleogene (SPP) zone 20 A to 20 C4,33,33.9,32,383,240,527,"Roth-Nebelsick et al., 2014",RN14,,,,
+"radiometric constraints (Reidel & Fecht, 1987)",15.15,16.65,13.65,339,318,558.6,"Royer et al., 2001b (updated by Beerling et al., 2009)",Clarkia,,,,https://doi.org/10.1126/science.292.5525.2310
+"radiometric constraints (Reidel & Fecht, 1987)",15.25,16.75,13.75,341,318.6,559.4,"Royer et al., 2001b (updated by Beerling et al., 2009)",Clarkia,,,,https://doi.org/10.1126/science.292.5525.2310
+"radiometric constraints (Reidel & Fecht, 1987)",15.3,16.8,13.8,313,308.1,479.8,"Royer et al., 2001b (updated by Beerling et al., 2009)",Clarkia,,,,https://doi.org/10.1126/science.292.5525.2310
+"radiometric constraints (Reidel & Fecht, 1987)",16.5,18,15,535,402,704,"Royer et al., 2001b (updated by Beerling et al., 2009)",Clarkia,,,,https://doi.org/10.1126/science.292.5525.2310
+"1.8 Myrs after the PETM (Age Model 2 in Wing et al., 2000); LJH 9915",54.233,54.333,54.133,442.877,359.2522,623.0654,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"1.7 Myrs after the PETM (Age Model 2 in Wing et al., 2000); SLW H",54.29,54.39,54.19,327.362,317.6866,415.9622,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"1.3 Myrs after the PETM (Age Model 2 in Wing et al., 2000); SLW LB",54.7,54.8,54.6,377.715,343.1595,578.6856,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.4 Myrs after the PETM (Age Model 2 in Wing et al., 2000); SLW 9915",55.6,55.7,55.5,479.408,379.8876,638.9294,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.1 Myrs after the PETM (Age Model 2 in Wing et al., 2000); SLW 9812",55.9,58.9,52.9,666.996,474.8663,748.2942,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.1 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 8612",56.1,56.2,56,307,297.7558,320.992,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.1 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 9936",56.1,56.2,56,307,297.7558,320.992,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.1 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 9050",56.141,56.241,56.041,307,297.7558,320.992,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.1 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 9715",56.143,56.243,56.043,519.887,399.6333,672.8924,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.2 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 9434",56.163,56.263,56.063,303.667,297.4468,310.7482,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.4 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 9411",56.4,56.5,56.3,312.553,304.2594,320.2264,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.5 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 9155",56.464,56.564,56.364,315.515,305.148,324.9656,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.6 Myrs before the PETM (Age Model 2 in Wing et al., 2000); LJH 72141-1",56.607,56.707,56.507,320.451,309.3931,335.2266,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.7 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 993",56.743,56.943,56.543,314.528,305.5435,322.8062,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.7 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 992",56.743,56.943,56.543,318.477,306.7282,327.9528,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"0.7 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 991",56.743,56.943,56.543,318.477,306.7282,327.9528,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"1.2 Myrs before the PETM (Age Model 2 in Wing et al., 2000); LJH 7132",57.154,57.354,56.954,468.547,378.702,630.523,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"2.1 Myrs before the PETM (Age Model 2 in Wing et al., 2000); SLW 0025",58.136,58.436,57.836,446.827,367.3483,623.0614,"Royer et al., 2001b (updated by Beerling et al., 2009)",Bighorn Basin,,,,https://doi.org/10.1126/science.292.5525.2310
+"middle Tiffanian (Ti-3) (Fox, 1990); Joffre Bridge site",59.875,60.75,59,534.697,415.8251,680.1568,"Royer et al., 2001b (updated by Beerling et al., 2009)",Alberta,,,,https://doi.org/10.1126/science.292.5525.2310
+"middle Tiffanian (Ti-3) (Fox, 1990); Burbank site",59.875,60.75,59,574.189,432.6567,703.9216,"Royer et al., 2001b (updated by Beerling et al., 2009)",Alberta,,,,https://doi.org/10.1126/science.292.5525.2310
+"1.7 Myrs after the PETM (Age Model 2 in Wing et al., 2000); SLW H",54.29,54.39,54.19,514.951,393.3148,670.9072,"Royer, 2003 (updated by Beerling et al., 2009)",Bighorn Basin,,,,
+"Torrejonian-Tiffanian (Dunn, 2003); DMNH 2644",61.1,64.8,57.4,317.489,310.5779,324.8336,"Royer, 2003 (updated by Beerling et al., 2009)",Hanna Basin,,,,
+"radiometric dating (Moss et al., 2005)",50.6,50.76,50.44,600,600,,"Smith et al., 2010",Okanagan Highlands,,,,
+"radiometric dating (Moss et al., 2005)",50.6,50.76,50.44,600,600,,"Smith et al., 2010",Okanagan Highlands,,,,
+"radiometric dating (Moss et al., 2005)",50.61,50.77,50.45,600,600,,"Smith et al., 2010",Okanagan Highlands,,,,
+Pliensbachian,188.55,192.9,184.2,809.4,539.6,1079.2,"Steinthorsdottir and Vajda, 2015",SV15,,,,
+just after the T-J extinction,201.05,201.36,200.8,1320,880,1760,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just after the T-J extinction,201.05,201.36,200.8,1140,760,1520,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just after the T-J extinction,201.05,201.36,200.8,2791.5,1861,3722,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just after the T-J extinction,201.05,201.36,200.8,1468.5,979,1958,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+during the T-J extinction,201.36,201.8,200.8,2151.75,1434.5,2869,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+during the T-J extinction,201.36,201.8,200.8,1603.875,1069.25,2138.5,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1445.25,963.5,1927,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1092,728,1456,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1194.75,796.5,1593,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1236,824,1648,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1113,742,1484,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1761,1174,2348,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1599.75,1066.5,2133,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1459.125,972.75,1945.5,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,880.5,587,1174,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1206,804,1608,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+just before the T-J extinction,201.55,201.8,201.36,1122.39225,748.2615,1496.523,"Steinthorsdottir et al., 2011",AstartekloftLarne,,,,https://doi.org/10.1016/j.palaeo.2011.05.050
+biostratigraphy and lithostratigraphy; Spore Pollen zone II (age conversion is approximate),23.5,24,23,475.81,351.6,600.02,"Steinthorsdottir et al., 2016a",S16a,,,,https://doi.org/10.5194/cp-12-439-2016
+biostratigraphy and lithostratigraphy; Spore Pollen zone 20G (age conversion is approximate),26.5,27,26,428.755,316.8,540.71,"Steinthorsdottir et al., 2016a",S16a,,,,https://doi.org/10.5194/cp-12-439-2016
+biostratigraphy and lithostratigraphy; Spore Pollen zone 20 A/B (age conversion is approximate),33.45,33.9,33,409.395,302.5,516.29,"Steinthorsdottir et al., 2016a",S16a,,,,https://doi.org/10.5194/cp-12-439-2016
+biostratigraphy and lithostratigraphy; Spore Pollen zone 19 (age conversion is approximate),34.45,35,33.9,410.17,303.1,517.24,"Steinthorsdottir et al., 2016a",S16a,,,,https://doi.org/10.5194/cp-12-439-2016
+biostratigraphy and lithostratigraphy; Spore Pollen zone 18o (age conversion is approximate),36,36.5,35.5,364.805,269.56,460.05,"Steinthorsdottir et al., 2016a",S16a,,,,https://doi.org/10.5194/cp-12-439-2016
+biostratigraphy,60,62,58,322.34,274.9,644.68,"Steinthorsdottir et al., 2016b",S16b,,,,
+biostratigraphy,65.5,66,65,418.08,363.08,836.16,"Steinthorsdottir et al., 2016b",S16b,,,,
+biostratigraphy,65.9,66,65.8,429.18,364.61,858.36,"Steinthorsdottir et al., 2016b",S16b,,,,
+biostratigraphy,67,68,66,648.52,554.69,1297.04,"Steinthorsdottir et al., 2016b",S16b,,,,
+Pliocene,3.09,3.6,2.58,357,333,376,"Stults et al., 2011",Stults11,,,,
+Late Miocene,8.48,11.625,5.335,360,252,594,"Stults et al., 2011",Stults11,,,,
+early Lower Cretaceous,137.85,143.1,132.6,1442.011821,961.3412137,1922.682427,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+early Lower Cretaceous,137.85,143.1,132.6,1228.140404,818.7602697,1637.520539,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+early Lower Cretaceous,137.85,143.1,132.6,1150.573642,767.0490947,1534.098189,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+Bajocian,169.535,170.9,168.17,1031.174491,687.4496604,1374.899321,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+Bajocian,169.535,170.9,168.17,926.3092881,617.5395254,1235.079051,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+Aalenian,172.8,174.7,170.9,895.9384918,597.2923279,1194.584656,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+Pleinsbachian,188.55,192.9,184.2,942.2801379,628.1867586,1256.373517,"Sun et al., 2007",Sun07,,,,https://doi.org/10.1111/j.1755-6724.2007.tb01016.x
+biostratigraphy: Oligocene,28.465,33.9,23.03,390,264.6666667,715.3333333,"Sun et al., 2017",Sun17,,,,
+Tiglian,2.1,2.4,1.8,357.5,250.25,589.875,"van der Burgh et al., 1993 (updated by Kürschner et al., 1996)",vdb93,,,,
+Early Brunssummian,5.1,,,357.5,250.25,589.875,"van der Burgh et al., 1993 (updated by Kürschner et al., 1996)",vdb93,,,,
+Susterian,7.2,,,270,189,445.5,"van der Burgh et al., 1993 (updated by Kürschner et al., 1996)",vdb93,,,,
+Linne C,8.5,,,350,245,577.5,"van der Burgh et al., 1993 (updated by Kürschner et al., 1996)",vdb93,,,,
+Linne B,10.5,,,370,259,610.5,"van der Burgh et al., 1993 (updated by Kürschner et al., 1996)",vdb93,,,,
+Santonian,84.675,85.7,83.65,660.172314,542.2539229,1895.576527,"Wan et al., 2011",Wan11,,,,
+Santonian,84.675,85.7,83.65,531.2031175,473.4825631,732.7895164,"Wan et al., 2011",Wan11,,,,
+Santonian,84.675,85.7,83.65,565.2162147,512.4472883,795.0781681,"Wan et al., 2011",Wan11,,,,
+magnetostratigraphy and calcareous nanoplankton stratigraphy,0.95,,,278,194.6,458.7,"Wang et al, 2015",Wang15,,,,
+magnetostratigraphy and calcareous nanoplankton stratigraphy,1.85,,,280,196,462,"Wang et al, 2015",Wang15,,,,
+magnetostratigraphy and calcareous nanoplankton stratigraphy,2.6,,,285,199.5,470.25,"Wang et al, 2015",Wang15,,,,
+magnetostratigraphy and calcareous nanoplankton stratigraphy,2.65,2.7,2.6,279,195.3,460.35,"Wang et al, 2015",Wang15,,,,
+magnetostratigraphy and calcareous nanoplankton stratigraphy,2.9,3,2.8,280,196,462,"Wang et al, 2015",Wang15,,,,
+radiometric dating,9.5,10,9,351,245.7,579.15,"Wang et al, 2015",Wang15,,,,
+Middle Miocene,13.8,16,11.6,334,233.8,551.1,"Wang et al, 2015",Wang15,,,,
+biostratigraphy; Aalenian to Bajocian,171.2,174.7,168.3,990,660,1320,"Wu et al., 2016",Wu16,,,,
+biostratigraphy; Aalenian to Bajocian,171.2,174.7,168.3,954,636,1272,"Wu et al., 2016",Wu16,,,,
+biostratigraphy; Rhaetian,203.55,205.74,201.36,1471.5,981,1962,"Wu et al., 2016",Wu16,,,,
+Middle Jurassic,168.8,174.7,163.5,1422,948,1896,"Yan et al., 2009",Yan09,,,,
+Middle Jurassic,168.8,174.7,163.5,1372.5,915,1830,"Yan et al., 2009",Yan09,,,,
+Middle Jurassic,168.8,174.7,163.5,1296,864,1728,"Yan et al., 2009",Yan09,,,,
+Middle Jurassic,168.8,174.7,163.5,1188,792,1584,"Yan et al., 2009",Yan09,,,,
+Middle Jurassic,168.8,174.7,163.5,1134,756,1512,"Yan et al., 2009",Yan09,,,,

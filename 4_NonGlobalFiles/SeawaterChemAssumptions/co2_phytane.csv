@@ -1,0 +1,307 @@
+﻿AgeDescription,Age,AgeLower,AgeUpper,CO2,CO2Low1s,CO2High1s,Source,Site,Latitude,Longitude,Notes,doi
+Quaternary,0.1,0.3,0,282.539456,209.1791357,372.4723307,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Quaternary,0.5,1,0,247.9830947,182.9010105,326.6182135,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Quaternary,0.8,1,0.5,282.9169019,208.2326683,373.9831852,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,1.8,2,1.5,274.5163895,204.0390445,361.1773168,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,2.1,2.3,2,306.7872361,227.4044062,404.300006,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,2.3,2.5,2,344.1607706,254.0772974,455.8214244,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,2.7,3,2.5,298.4662443,221.1739628,392.5634747,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,3.2,3.5,3,340.3334215,253.52148,446.0001888,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,3.8,4,3.5,350.4537749,260.0610195,461.6610446,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene,4,4.2,3.8,363.7251316,268.739423,480.864565,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Pliocene/Miocene,5,5.2,4.8,352.7848629,262.311012,462.0509681,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,5.5,5.6,5.4,376.4378263,278.7689879,496.4040066,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,6,6.2,5.8,374.4187874,276.8492599,492.9918353,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,6.25,6.5,6,379.3738781,281.5292916,499.8255045,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,7.25,7.5,7,351.2336071,262.1326518,461.5457715,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,7.75,8,7.5,368.6000608,273.4723416,485.7325064,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"U Miocene, Cenozoic",8,11.62,5.333,319.8854109,236.2862978,421.619139,Unpublished data from Hayes et al 1995,Antelope San Joaquin CA,,,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,8.25,8.5,8,359.8041319,268.4232413,473.6841857,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,9.25,9.5,9,352.1201547,261.4767092,461.6214518,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,9.3,9.5,9,364.3001932,271.0234427,476.371005,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Upper Miocene,10.5,10.7,10.2,370.7947197,274.8566757,487.8261086,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Middle-Upper Miocene, Cenozoic",11,14,7,398.1622694,296.5542133,521.2832483,Witkowski2018,Namerica,,,,https://doi.org/10.1126/sciadv.aat4556
+"Middle-Upper Miocene, Cenozoic",11,14,7,415.0595994,307.0698767,544.9951671,Witkowski2018,Namerica,,,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",11.1,11.1,11.1,314.7693981,233.6294165,413.6240438,Schouten et al. 1997a,Monterey Formation,,,,
+"Miocene, Cenozoic",11.3,11.3,11.3,315.3244145,234.4548661,414.249544,Schouten et al. 1997a,Monterey Formation,,,,
+Middle Miocene,12,12.2,11.8,400.9504093,295.9267887,531.0197443,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Middle Miocene,12.5,12.7,12.2,391.9601681,290.5125307,517.2311792,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+Middle Miocene,13,13.2,12.8,404.3109532,299.364042,535.4662564,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",13.1,13.1,13.1,314.4982862,233.9363764,412.6923412,Schouten et al. 1997a,Monterey Formation,,,,
+"Miocene, Cenozoic",13.5,13.6,13.4,457.6157938,331.4597347,624.5107097,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+Middle Miocene,13.9,14.1,13.7,420.2578879,309.6689495,557.295481,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",14,23,5.3,378.3479878,281.5070186,495.7816875,Witkowski2018,Europe,,,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",14.3,14.5,14.2,515.9907515,370.6285707,713.3142675,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",14.5,14.6,14.4,467.3371289,336.4371993,644.5875691,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",14.5,14.6,14.4,473.9019243,339.4501339,654.004027,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",14.6,14.7,14.7,366.2109512,271.3866188,482.6502375,Schouten et al. 1997a,Monterey Formation,,,,
+"Miocene, Cenozoic",14.7,14.6,14.6,377.9195862,279.9346717,500.2435122,Schouten et al. 1997a,Monterey Formation,,,,
+Middle Miocene,14.8,15,14.5,363.8663495,269.1985365,478.3652212,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",14.8,14.9,14.7,432.9068471,312.9787277,591.4407248,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+Middle Miocene,15,15.2,14.8,445.5128967,327.560884,593.222648,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",15,15,15,388.148505,287.8949539,513.8165873,Schouten et al. 1997a,Monterey Formation,,,,
+"Miocene, Cenozoic",15,23.03,5.333,381.2501026,281.7123195,502.9503137,Curiale et al. 1985 (in Hughes et al. 1995),Monterey Santa Maria,,,,
+"Miocene, Cenozoic",15,23.03,5.333,477.8938205,350.908225,635.1942964,Meissner et al. 1984 (in Hughes et al. 1995),Salt Lake Group,,,,
+"Miocene, Cenozoic",15.1,15.2,15,440.7594486,318.6476434,603.9255802,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",15.2,15.25,15.1,467.7187313,334.4261699,648.566666,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",15.25,15.3,15.2,418.7190355,302.5701988,572.6660507,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+Middle Miocene,15.6,15.7,15.5,400.9930679,296.7613101,529.9725624,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",15.7,15.75,15.5,566.0103313,402.1248935,792.1170024,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",15.9,15.9,15.75,555.9360685,391.7833689,784.4597045,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+Middle Miocene,16.1,16.3,16,421.8069733,311.2697579,560.0673073,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",16.1,16.2,16,449.9699601,325.5081049,616.7838917,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",16.25,16.3,16.1,476.5917851,343.2956244,656.3087671,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",16.3,16.5,16.25,548.1147165,388.0600989,768.0173796,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+Middle Miocene,16.4,16.6,16.2,414.8618223,306.1222275,550.6003228,Witkowski2018,DSDP467,33.8495,-120.7578,,https://doi.org/10.1126/sciadv.aat4556
+"Miocene, Cenozoic",16.7,16.8,16.5,482.8682993,346.1428319,667.5990379,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",17,17.1,16.9,458.8571862,329.0082582,633.0495844,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",17.2,17.4,17.1,427.5398603,307.9224811,584.8474628,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",17.6,17.75,17.5,483.5911127,349.0573089,665.7577715,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",17.9,18.1,17.8,446.2146279,321.5740358,612.69208,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",18,23.03,5.333,403.115836,301.8901774,523.8045707,Yamamoto et al. 2005,Onnagawa Formation,,,,
+"Miocene, Cenozoic",18.2,18.3,18,402.0785063,291.2282573,547.2991436,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",18.3,18.5,18.2,382.0457029,278.2641358,519.538315,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",18.6,18.75,18.5,436.0497539,312.508794,599.0355792,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",18.75,18.9,18.6,395.739912,286.4850858,536.929435,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",18.9,19,18.7,476.0814128,342.4964317,653.8230199,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",19.2,19.2,19,491.500406,353.0720976,680.596808,Pagani et al. 2000 (estimated),ODP608,42.8367,-23.0875,,
+"Miocene, Cenozoic",19.2,19.3,19,623.6056863,449.5359148,859.5645282,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"Miocene, Cenozoic",19.4,19.5,19.2,633.0507811,455.2187292,872.7060845,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"Miocene, Cenozoic",19.6,19.7,19.5,568.7015047,414.0192233,776.2893982,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"Miocene, Cenozoic",20.25,20.3,20.2,629.081823,452.2799494,865.6614835,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"Miocene, Cenozoic",20.45,20.5,20.4,608.7953093,439.8860003,833.3644437,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"Miocene, Cenozoic",20.8,20.9,20.75,618.2492887,445.0131592,852.0662955,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"Miocene, Cenozoic",21.5,20.6,20.4,656.5961272,470.6563399,907.8224072,Pagani et al. 2000 (estimated),DSDP516,-30.2763,-35.2852,,
+"U Oligocene, Cenozoic",24,28.1,23.03,578.7903743,418.2468695,792.6389594,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"U Oligocene, Cenozoic",24,28.1,23.03,648.4216002,464.9586116,905.257661,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"U Oligocene, Cenozoic",25,28.1,23.03,657.5416447,467.3278778,922.2144603,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"U Oligocene, Cenozoic",25,28.1,23.03,649.9310102,463.1041456,907.8404539,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"U Oligocene, Cenozoic",27,28.1,23.03,768.1170753,532.6087093,1125.606309,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"U Oligocene, Cenozoic",27,28.1,23.03,695.3011993,489.7404661,996.5412721,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"Middle Oligocene, Cenozoic",28,30,26,724.041689,515.7758992,1015.984371,Witkowski2018,Europe,,,,
+"L Oligocene, Cenozoic",30,33.9,28.1,833.7380676,569.5313427,1253.924939,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"L Oligocene, Cenozoic",30,33.9,28.1,959.8675571,641.3695074,1508.733939,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"L Oligocene, Cenozoic",30,33.9,28.1,941.3237598,632.7688991,1470.6404,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"Early Oligocene, Cenozoic",31,33.9,28.1,616.0765091,445.713282,844.5690181,Witkowski2018,Europe,,,,
+"L Oligocene, Cenozoic",31,33.9,28.1,811.4488839,555.9330748,1203.220982,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"L Oligocene, Cenozoic",31,33.9,28.1,842.1227822,578.1101017,1265.388544,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"L Oligocene, Cenozoic",31,33.9,28.1,786.2017006,543.3057428,1156.684932,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"L Oligocene, Cenozoic",32,33.9,28.1,769.584016,533.8253338,1129.673817,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+"L Oligocene, Cenozoic",32,33.9,28.1,824.4633564,565.7192264,1230.451179,Bechtel et al. 2013 (estimated),Angeharan Azerbaijan,,,,
+Paleocene-Eocene,51,53.5,50,1063.173476,694.4391263,1742.581515,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,51,53.5,50,872.2162493,593.4400476,1330.013807,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,52,53.5,50,811.1414188,557.5427501,1210.908538,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,52,53.5,50,765.4636164,530.82987,1129.02382,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,52,53.5,50,910.0456119,612.907453,1411.121178,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,52,53.5,50,969.2891447,644.5619319,1535.211819,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,53,53.5,50,971.3129966,644.7962435,1536.022492,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,53,53.5,50,876.9786843,595.0144864,1341.985743,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,53,53.5,50,889.7364292,601.3177352,1369.008389,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,54,56,54,1445.620912,876.3786472,2756.388709,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,54,56,54,954.5819286,640.5793284,1475.714187,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,54,56,54,881.7398691,599.9180836,1337.332613,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,54,56,54,1405.022435,859.1693385,2616.598095,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,54,56,54,1371.671141,843.4141003,2547.953148,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,55,56,54,1333.713426,825.2787814,2450.090548,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,55,56,54,1370.498367,849.3786454,2540.03666,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,55,56,54,896.9785559,607.9633891,1368.774263,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,55,56,54,1094.637145,715.3091757,1803.983661,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,56,56,54,1332.274654,829.5600228,2434.734595,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+Paleocene-Eocene,56,56,54,1368.744442,841.9861714,2527.776585,Schoon et al. 2011,ACEX-M4A,87.86658,136.17735,,https://doi.org/10.1029/2010PA002028
+"Campanian, Cretaceous",78,83.6,72.1,993.7631122,701.0987002,1418.626472,Alizadah et al. 2015,Abadan Plain,,,,
+"Con/Camp, Cretaceous",81,89.8,72,608.955608,443.5385701,819.4016766,Witkowski2018,Africa,,,,
+"Santonian, Cretaceous",85,86.3,83.6,662.0619996,485.3842752,884.9360144,Alizadah et al. 2015,Abadan Plain,,,,
+"Santonian, Cretaceous",86,87,84,606.622027,452.210575,796.6472519,Bice et al. 2006,ODP1257,9.45343,-54.34158,,
+"Coniacian, Cretaceous",88,89,87,763.3688322,560.2412868,1018.947231,Bice et al. 2006,ODP1257,9.45343,-54.34158,,
+"Turonian, Cretaceous",89.5,90.5,88.5,872.7769797,636.3019816,1186.408854,Bice et al. 2006,ODP1257,9.45343,-54.34158,,
+"Turonian, Cretaceous",91,92,90,702.7541071,522.7587889,924.7074917,Bice et al. 2006,ODP1260,9.26551,-54.5442,,
+"Cen/Tur, Cretaceous",94,96,92,512.4441534,376.8904525,676.4165091,Witkowski2018,Africa,,,,
+"Cen/Tur, Cretaceous",94,96,92,716.9373657,518.9081107,981.0602631,Witkowski2018,Middle East,,,,
+"Cen/Tur, Cretaceous",94,96,92,904.8397519,647.736014,1267.393664,Alizadah et al. 2015,Abadan Plain,,,,
+"Cen/Tur, Cretaceous",94,96,92,1059.811906,744.8697683,1532.353785,Alizadah et al. 2015,Abadan Plain,,,,
+"Late Cenomanian, Cretaceous",94,97,93.9,892.7416102,644.6868679,1226.754363,van Bentum et al. 2012a,Newfoundland,,,,
+"Late Cenomanian, Cretaceous",94,97,93.9,1019.914758,725.1880638,1433.33571,van Bentum et al. 2012a,Newfoundland,,,,
+"Late Cenomanian, Cretaceous",94,97,93.9,863.9616569,623.7517069,1185.010265,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",94,97,93.9,1025.111853,726.9355753,1451.752366,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",94,97,93.9,1076.573146,760.9303534,1545.831832,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",94,97,93.9,1083.836953,768.2851032,1543.024879,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Late Cenomanian, Cretaceous",94,97,93.9,1199.755522,837.5973385,1754.57954,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Cenomanian, Cretaceous",94,100,93.9,691.0390606,500.6947992,942.9355906,Tsikos et al. 2004,Tarfaya,,,,
+"Cenomanian, Cretaceous",94,100,93.9,609.2990272,446.0132146,818.8781684,Tsikos et al. 2004,Tarfaya,,,,
+"Cenomanian, Cretaceous",94,100,93.9,629.1140251,458.8622561,849.9553427,Tsikos et al. 2004,Tarfaya,,,,
+"Cen/Tur, Cretaceous",94,96,92,631.7406442,466.2802807,838.1216278,Witkowski2018,Samerica,,,,
+"Cen/Tur, Cretaceous",94,96,92,800.2552488,581.6076291,1087.465388,Witkowski2018,Samerica,,,,
+"Cenomanian, Cretaceous",95,96,94,786.2104397,571.3536026,1074.329806,Bice et al. 2006,ODP1260,9.26551,-54.5442,,
+"Cenomanian, Cretaceous",95,97,93.5,1160.188839,814.6625195,1676.39827,Kuypers et al. 2004,ODP603,35.4952,-70.0285,,
+"Cenomanian, Cretaceous",95,97,93.5,1690.647364,1098.459588,2840.621639,Kuypers et al. 2002,DSDP144,9.4538,-54.342,,
+"Cenomanian, Cretaceous",95,97,93.5,1489.983994,997.6202935,2376.439133,Kuypers et al. 2002,DSDP144,9.4538,-54.342,,
+"Late Cenomanian, Cretaceous",95,97,93.9,1061.851461,750.2534175,1515.07559,van Bentum et al. 2012a,ODP1276,45.40533,-44.78583,,
+"Late Cenomanian, Cretaceous",95,97,93.9,901.2205864,650.303297,1241.546869,van Bentum et al. 2012a,ODP1276,45.40533,-44.78583,,
+"Late Cenomanian, Cretaceous",95,97,93.9,883.3144689,636.8485928,1217.868471,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",95,97,93.9,896.5865939,646.6494811,1239.817096,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",95,97,93.9,828.7153142,602.8005703,1130.693446,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",95,97,93.9,1022.249498,730.3443579,1435.325152,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Late Cenomanian, Cretaceous",95,97,93.9,1070.291266,758.1923233,1512.234166,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Cenomanian, Cretaceous",95,97,93.9,861.6466953,617.1711529,1199.31961,Forster et al. 2008,DSDP530,-19.1877,9.3858,,
+"Cenomanian, Cretaceous",95,97,93.9,987.7201633,699.199603,1410.52194,Forster et al. 2008,DSDP530,-19.1877,9.3858,,
+"Late Cenomanian, Cretaceous",95.5,97,93.9,1242.268577,858.7135445,1835.895813,van Bentum et al. 2012a,ODP1276,45.40533,-44.78583,,
+"Late Cenomanian, Cretaceous",95.9,97,93.9,1111.859008,783.7002408,1604.849451,van Bentum et al. 2012a,ODP1276,45.40533,-44.78583,,
+"Cenomanian, Cretaceous",96,97,95,714.8224819,525.806276,952.3839624,Bice et al. 2006,ODP1258,9.43333,-54.73303,,
+"Cenomanian, Cretaceous",96,97,95,682.5652748,500.320901,902.9431805,Bice et al. 2006,ODP1258,9.43333,-54.73303,,
+"Cenomanian, Cretaceous",96,97,95,834.2213764,604.3501449,1137.435631,Bice et al. 2006,ODP1260,9.26551,-54.5442,,
+"Cenomanian, Cretaceous",96,97,93.5,1434.223419,972.3247764,2212.958885,Kuypers et al. 2004,ODP603,35.4952,-70.0285,,
+"Late Cenomanian, Cretaceous",95.45,97,93.9,878.3610534,634.3649495,1203.227312,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Cenomanian, Cretaceous",96,97,93.5,1341.710352,915.7571652,2050.097623,Kuypers et al. 2002,DSDP144,9.4538,-54.342,,
+"Cenomanian, Cretaceous",96,97,93.5,1429.428166,963.0088942,2238.112399,Kuypers et al. 2002,DSDP144,9.4538,-54.342,,
+"Late Cenomanian, Cretaceous",96,97,93.9,925.5972113,663.413943,1281.001004,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",96,97,93.9,1133.300804,794.2958419,1645.069288,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",96,97,93.9,1027.78967,729.1964459,1458.750775,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",96,97,93.9,1224.782876,855.3758922,1808.83918,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Late Cenomanian, Cretaceous",96,97,93.9,1019.025968,730.5995252,1429.084939,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Cenomanian, Cretaceous",96,97,93.9,946.9343831,669.6267392,1348.94841,Forster et al. 2008,DSDP530,-19.1877,9.3858,,
+"Cenomanian, Cretaceous",96,97,93.9,848.9418973,609.7192869,1179.635579,Forster et al. 2008,DSDP530,-19.1877,9.3858,,
+"Late Cenomanian, Cretaceous",96.3,97,93.9,1174.446843,820.8737534,1714.042182,van Bentum et al. 2012a,ODP1276,45.40533,-44.78583,,
+"Late Cenomanian, Cretaceous",96.7,97,93.9,1133.625996,798.0653864,1641.466679,van Bentum et al. 2012a,ODP1276,45.40533,-44.78583,,
+"Cenomanian, Cretaceous",97,98,96,1186.062344,836.9328077,1710.345029,Bice et al. 2006,ODP1260,9.26551,-54.5442,,
+"Cenomanian, Cretaceous",97,99.5,97.5,904.531305,657.9823158,1235.149249,Bice et al. 2006,ODP1260,9.26551,-54.5442,,
+"Cenomanian, Cretaceous",97,97,93.5,1095.50513,776.519399,1569.771868,Kuypers et al. 2004,ODP603,35.4952,-70.0285,,
+"Cenomanian, Cretaceous",97,97,93.5,1461.348895,980.0801459,2314.410655,Kuypers et al. 2002,DSDP144,9.4538,-54.342,,
+"Late Cenomanian, Cretaceous",97,97,93.9,912.1551824,657.4291628,1259.607748,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",97,97,93.9,921.8174525,664.6709928,1280.550082,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",97,97,93.9,1112.58719,782.8142358,1606.028657,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",97,97,93.9,1194.022531,829.1372501,1757.985566,van Bentum et al. 2012b,ODP1260,9.26551,-54.5442,,
+"Late Cenomanian, Cretaceous",97,97,93.9,1034.159309,734.8965419,1457.719152,Sinninghe Damste et al. 2008b,DSDP367,12.4868,-20.0472,,https://doi.org/10.1016/j.orggeochem.2008.01.012
+"Cenomanian, Cretaceous",97,97,93.9,898.6125778,639.2340444,1269.030022,Forster et al. 2008,DSDP530,-19.1877,9.3858,,
+"Cenomanian, Cretaceous",97,97,93.9,899.2963245,642.3749802,1266.736806,Forster et al. 2008,DSDP530,-19.1877,9.3858,,
+"Cenomanian, Cretaceous",97,100,93.9,935.5343036,670.8795108,1297.019678,Witkowski2018,Middle East,,,,
+"Albian, L Cretaceous",99,100,98,760.5179411,555.8156598,1025.000846,Bice et al. 2006,ODP1258,9.43333,-54.73303,,
+"U Albian, Cretaceous",102,105,100.5,1133.497175,793.5639269,1651.24447,Alizadah et al. 2015,Abadan Plain,,,,
+"U Albian, Cretaceous",102,105,100.5,936.4247527,670.2125245,1303.936634,Alizadah et al. 2015,Abadan Plain,,,,
+"L Aptian/Early Albian , Cretaceous",111,113,110,1125.355577,790.2813744,1636.421395,Kuypers et al. 2002,ODP1049,30.14227,-76.11211,,
+"L Aptian/Early Albian , Cretaceous",115,115,113.8,906.5519948,651.637537,1254.754751,Kuypers et al. 2002,ODP1049,30.14227,-76.11211,,
+"Aptian, Cretaceous",115,115,113,996.1408138,680.6241542,1509.334703,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"Aptian, Cretaceous",116,115,113,1291.88179,837.6479107,2146.350739,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"Aptian, Cretaceous",116,116,114,1277.872265,832.7900622,2122.013949,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"Aptian, Cretaceous",116,117,115,1193.875305,786.103879,1924.072281,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"L Aptian/Early Albian , Cretaceous",117,117,116,838.2342745,607.3913117,1144.900908,Kuypers et al. 2002,ODP1049,30.14227,-76.11211,,
+"Aptian, Cretaceous",117,118,116,1231.250466,808.4055519,2027.35392,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"Early Aptian, Cretaceous",117,118,116,1335.908881,865.3018438,2266.142437,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"L Aptian/Early Albian , Cretaceous",118,118,116,1231.389851,854.263946,1828.390016,Kuypers et al. 2002,ODP1049,30.14227,-76.11211,,
+"Early Aptian, Cretaceous",120,121,119,1048.389722,709.0175867,1623.512439,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"L Aptian, Cretaceous",122,126,118,893.6319531,641.1527526,1243.128219,Alizadah et al. 2015,Abadan Plain,,,,
+"L Aptian, Cretaceous",122,126,118,833.2398242,601.9953726,1149.737087,Alizadah et al. 2015,Abadan Plain,,,,
+"Early Aptian, Cretaceous",122,123,121,978.08674,670.5871443,1465.054935,Tsikos et al. 2004,Vigla Shale Greece,,,,
+"Early Aptian, Cretaceous",124,125,123,958.7021164,659.759247,1437.594982,Tsikos et al. 2004,Vigla Shale Greece,,,,
+L Cretaceous,140,145,132.9,820.1761042,593.7368473,1127.244816,Alizadah et al. 2015,Abadan Plain,,,,
+L Cretaceous,140,145,132.9,863.8833143,622.4690143,1195.072245,Alizadah et al. 2015,Abadan Plain,,,,
+Late Jurassic/Early Cretaceous (Hekkingen Formation),144,150,138,641.0204275,447.8939146,928.3772901,Murillo et al. 2016,Albatross Barents Sea,,,,
+"Tith/Berr, Jurassic/Cretaceous",145,152,139,1062.429052,731.3454355,1585.726978,Witkowski2018,Eurasia,,,,
+Early Cret/Late Jurassic,145,152,139,774.4644153,558.6044385,1064.619342,Witkowski2018,Samerica,,,,
+Early Cret/Late Jurassic,145,152,139,730.2607732,530.2352781,991.1875314,Witkowski2018,Samerica,,,,
+"Tithonian, Jurassic",145,152.1,145,607.9708403,434.0570424,846.6241503,van Kaam-Peters et al. 1997a,KCF Dorset,,,,
+"Tithonian, Jurassic",145,152.1,145,585.3633012,420.0453809,810.6561602,van Kaam-Peters et al. 1997a,KCF Dorset,,,,
+"Tithonian, Jurassic",146,152.1,145,540.4880339,389.6670253,735.7329928,van Kaam-Peters et al. 1997a,KCF Dorset,,,,
+"Tithonian, Jurassic",146,152.1,145,690.351721,489.1051281,982.9374502,van Kaam-Peters et al. 1998,KCF Dorset,,,,
+Late Jurassic/Early Cretaceous (Hekkingen Formation),146,150,138,675.2293746,468.5064721,980.6126351,Murillo et al. 2016,Askeladd Barents Sea,,,,
+"Tithonian, Jurassic",147,152.1,145,723.1736262,508.3872478,1039.715612,van Kaam-Peters et al. 1998,KCF Dorset,,,,
+"Tithonian, Jurassic",148,152.1,145,785.8404819,547.7622819,1152.350145,van Kaam-Peters et al. 1998,KCF Dorset,,,,
+"Tithonian, Jurassic",148,152.1,145,586.827165,422.9474708,810.076765,Koopmans et al. 1996,Calcaires en Plaquettes,,,,
+Late Jurassic/Early Cretaceous (Hekkingen Formation),148,150,138,617.5619482,432.9351558,883.7353835,Murillo et al. 2016,Askeladd Barents Sea,,,,
+"Tithonian, Jurassic",149,152.1,145,746.860902,522.9483253,1081.774658,van Kaam-Peters et al. 1998,KCF Dorset,,,,
+"Tithonian, Jurassic",149,152.1,145,659.4030851,469.3126105,930.2295839,Koopmans et al. 1996,Kimmeridge,,,,
+"Tithonian, Jurassic",150,152.1,145,726.2058382,511.0783443,1041.882298,van Kaam-Peters et al. 1998,KCF Dorset,,,,
+"Tithonian, Jurassic",150,152.1,145,788.3113111,545.5189921,1157.04581,van Kaam-Peters et al. 1998,KCF Dorset,,,,
+Late Jurassic/Early Cretaceous (Hekkingen Formation),150,150,138,600.9760353,423.5081642,858.7270425,Murillo et al. 2016,Askeladd Barents Sea,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,676.2864664,483.1140321,939.5021676,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,705.4966862,502.2276176,989.7704622,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,742.7907882,528.2329392,1055.544122,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,660.8100618,475.4433841,916.4137105,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,784.7554035,553.6945837,1118.834389,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,651.7840843,469.2718224,900.1908062,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,686.3031285,492.3368948,958.0609742,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,784.2461324,552.856662,1117.902814,Witkowski2018,Europe,,,,
+"Kimmeridge, Jurassic",154.7,157.3,152.1,535.1239776,389.351258,721.0909271,Witkowski2018,Europe,,,,
+Late Jurassic,155,164,145,1017.992013,679.4560862,1615.614532,Koopmans et al. 1996,Allgau Marlstone,,,,
+"Kimmeridge, Jurassic",155,157.3,152.1,930.9275615,664.8038801,1309.538604,Witkowski2018,Middle East,,,,
+"Call/Kim, Jurassic",159,166,152,812.9000034,588.7176172,1112.218262,Witkowski2018,Middle East,,,,
+"Call/Kim, Jurassic",159,166,152,758.8510666,553.2782783,1026.827799,Witkowski2018,Middle East,,,,
+"Toarcian, Jurassic",177,182.7,174.1,940.2188364,643.0766203,1428.318942,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",177,182.7,174.1,989.7183593,672.2291833,1521.963526,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",178,182.7,174.1,677.7420498,486.5896619,946.5390198,Witkowski2018,Europe,,,,
+"Toarcian, Jurassic",178,182.7,174.1,1018.964192,691.5072355,1563.116772,Witkowski2018,Europe,,,,
+"Toarcian, Jurassic",178,182.7,174.1,973.0286093,664.3673528,1484.864396,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",178,182.7,174.1,1021.716558,689.9719712,1586.370814,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",178,182.7,174.1,808.3473827,565.3539883,1168.636729,Schouten et al. 2000c,Schomberg,,,,
+"Toarcian, Jurassic",178,182.7,174.1,666.9172403,478.3327638,928.4075007,Schouten et al. 2000c,Schomberg,,,,
+"Toarcian, Jurassic",178,182.7,174.1,694.2248216,495.6947693,972.9168014,Schouten et al. 2000c,Schomberg,,,,
+"Toarcian, Jurassic",179,182.7,174.1,970.8522975,660.2243446,1479.806861,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",179,182.7,174.1,1040.516723,699.4567103,1630.665417,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",180,182.7,174.1,1012.234825,686.4393797,1566.923515,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",180,182.7,174.1,956.4116926,650.5272727,1453.181406,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",181,182.7,174.1,984.9360867,673.3139579,1506.542428,French et al. 2014,Hawkser,,,,
+"Toarcian, Jurassic",181,182.7,174.1,999.0246587,676.4791561,1540.827767,French et al. 2014,Hawkser,,,,
+"Plien/Toar, Jurassic",182,191,174,794.5304926,557.9569412,1138.667816,Witkowski2018,Europe,,,,
+"Toarcian, Jurassic",182,182.7,174.1,983.8665846,669.0653083,1502.269574,French et al. 2014,Hawkser,,,,
+Early Jurassic (Nordmela Formation),184,186,182,643.6881217,459.4662957,898.5073646,Murillo et al. 2016,Alke Barents Sea,,,,
+"Hett, Jurassic",200,201,199,873.4427772,608.4079373,1282.779616,Witkowski2018,Europe,,,,
+"Rhaetian, Triassic",205,209,201.3,1231.160997,826.0106461,1957.585527,Witkowski2018,Europe,,,,
+Late Triassic (Snadd Formation),226,232,220,1036.362082,720.6632061,1526.868354,Murillo et al. 2016,Goliat,,,,
+Late Triassic (Snadd Formation),226,232,220,1019.221992,712.8245152,1489.737643,Murillo et al. 2016,Tornerose,,,,
+Mid/Late Triassic (Snadd Formation),226,232,220,1587.958826,1014.978277,2769.865752,Murillo et al. 2016,Albatross Barents Sea,,,,
+Mid Triassic (Konne Formation),237,242,232,739.0518627,516.8760505,1056.332698,Murillo et al. 2016,Goliat,,,,
+M Triassic,242,247.2,237,684.4263625,481.4872162,978.9368907,Witkowski2018,Namerica,,,,
+"Vikinghogda, Triassic",246,252.17,251.2,1188.017005,815.6525055,1796.286208,Nabbefeld et al. 2010,Lusitaniandalen,,,,
+"Vikinghogda, Triassic",247,252.17,251.2,1058.874286,741.4456567,1548.398013,Nabbefeld et al. 2010,Lusitaniandalen,,,,
+"Vikinghogda, Triassic",247,252.17,251.2,1621.806045,1042.568923,2800.778106,Nabbefeld et al. 2010,Lusitaniandalen,,,,
+Triassic,248,252.17,251.2,422.5712862,298.6884101,594.7402264,Brooks et al. 1992 (in Hayes et al. 1995),Schei Point,,,,
+"Changhsingian, Permian",253,254.14,252.17,872.5115096,622.2991028,1231.904529,Nabbefeld et al. 2010,Lusitaniandalen,,,,
+"Changhsingian, Permian",253,254.14,252.17,1088.767513,753.9138527,1615.894485,Nabbefeld et al. 2010,Lusitaniandalen,,,,
+Permian,256,259.8,252.17,695.4880914,478.6690499,1031.221073,Grice et al. 1996,Rhine Basin,,,,
+U Permian,262,268.8,252.17,571.9447611,412.2805444,784.4652913,Witkowski2018,Europe,,,,
+U Permian,262,268.8,252.17,460.3459402,336.8753073,615.8229924,Witkowski2018,Europe,,,,
+"Mississipian, Carboniferous",343,358.9,323.2,496.8622505,347.7505462,718.5768791,Osadetz et al. 1992 (in Hughes et al. 1995),Lodgepole,,,,
+"Famm/Tour, Devonian/Carboniferous",355,363,347,270.2837304,191.9675125,376.707687,Witkowski2018,Namerica,,,,
+"Famm/Tour, Devonian/Carboniferous",355,363,347,502.4655606,329.6387306,789.1239109,Witkowski2018,Namerica,,,,
+U Devonian,372,382.7,358.9,939.2962788,667.7542026,1320.166137,Witkowski2018,Namerica,,,,
+U Devonian,372,382.7,358.9,1113.640507,773.2378735,1631.896107,Unpublished data (in Hayes et al. 1995),Woodford,,,,
+"Rhenana Frasnian, Devonian",377,379,377,946.469468,672.7132144,1339.230113,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Rhenana Frasnian, Devonian",377,379,377,1161.202409,805.2988293,1716.807079,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Frasnian, Devonian",377,382,375,903.7056379,641.9769313,1278.466484,Tulipani et al. 2015,Lennard Shelf,,,,
+"Rhenana Frasnian, Devonian",378,379,377,1308.29385,892.8787836,2019.673324,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Rhenana Frasnian, Devonian",378,379,377,975.0060257,675.7532993,1436.706506,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Frasnian, Devonian",378,382,375,878.2747588,626.1314262,1235.900357,Tulipani et al. 2015,Lennard Shelf,,,,
+"Rhenana Frasnian, Devonian",379,379,377,1030.275085,707.1101766,1539.57654,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Rhenana Frasnian, Devonian",379,379,377,927.9943076,648.3209411,1342.963517,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Rhenana Frasnian, Devonian",379,382.7,372.2,936.3619614,653.8740884,1372.143661,Joachimski et al. 2002 (estimated),Holy Cross Mts,,,,
+"Frasnian, Devonian",379,382,375,955.2362759,679.9535964,1351.274756,Witkowski2018,Eurasia,,,,
+"Frasnian, Devonian",379,382,375,947.3501643,671.6377304,1359.246854,Tulipani et al. 2015,Lennard Shelf,,,,
+"Frasnian, Devonian",379,382,375,993.7152692,697.6893972,1437.819063,Tulipani et al. 2015,Lennard Shelf,,,,
+"Frasnian, Devonian",380,382,375,833.4870868,590.3379945,1183.191728,Tulipani et al. 2015,Lennard Shelf,,,,
+Frasian-Givetian,383,385,380,1241.163613,815.1483196,2029.150816,Tulipani et al. 2015,Lennard Shelf,,,,
+Frasian-Givetian,383,385,380,1262.453746,830.6313726,2086.589146,Tulipani et al. 2015,Lennard Shelf,,,,
+Frasian-Givetian,383,385,380,1088.336272,737.2442086,1691.671425,Tulipani et al. 2015,Lennard Shelf,,,,
+Frasian-Givetian,383,385,380,1020.462577,695.0006744,1554.723882,Tulipani et al. 2015,Lennard Shelf,,,,
+Frasian-Givetian,383,385,380,1355.912282,877.5588717,2331.20582,Tulipani et al. 2015,Lennard Shelf,,,,
+M Devonian,388,393.3,382.7,722.6735741,513.8909929,1015.274248,Witkowski2018,Namerica,,,,
+Silurian,431.5,443.1,419,508.8280989,358.9345888,719.5736374,Witkowski2018,Africa,,,,
+Early Silurian,438,443.1,432.9,665.5011609,484.205575,897.8244845,Witkowski2018,Middle East,,,,
+U Ordovician,450,458.2,443.1,679.8094464,465.9219346,1019.005966,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,655.4834349,451.6070773,972.6641441,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,657.3059621,451.3779462,973.1829876,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,718.0757096,486.0939272,1095.371179,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,568.7249207,397.3184103,818.4067917,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,715.7382878,485.3471161,1092.675405,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,691.0183916,470.9361058,1041.988066,Guthrie 1996,Elgin,,,,
+U Ordovician,450,458.2,443.1,561.7154345,390.5109681,819.0616457,Guthrie 1996,Maquoketa,,,,
+U Ordovician,450,458.2,443.1,599.6189063,410.9527343,889.44255,Guthrie 1996,Maquoketa,,,,
+U Ordovician,450,458.2,443.1,561.6910839,390.5079853,823.2951845,Guthrie 1996,Maquoketa,,,,
+U Ordovician,450,458.2,443.1,536.7136748,374.7532441,776.7160987,Guthrie 1996,Maquoketa,,,,
+"Dunleith, Ordovician",452,455,450,370.8326097,267.9939387,506.0428044,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,372.3418498,269.69966,507.2836438,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,391.1238833,281.3021382,538.4169583,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,370.2530443,267.6311026,507.5906283,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,326.8086085,239.0977935,441.2286712,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,357.0592833,258.5507249,484.3733081,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,316.8337099,231.902531,426.7245029,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,359.4605287,260.4017656,488.97425,Pancost et al. 2013,Millbrook Farms,,,,
+"Platteville, Ordovician",455,459,446,364.1688878,263.5987452,493.738169,Pancost et al. 2013,Millbrook Farms,,,,

@@ -1,0 +1,15 @@
+﻿AgeDescription,Age,AgeLower,AgeUpper,CO2,CO2Low1s,CO2High1s,Source,Site,Latitude,Longitude,doi
+Ypresian,52.035,56,48.07,1867.6415,1396.262444,2860.887628,Fletcher2008,Amurskya,,,https://doi.org/10.1038/ngeo.2007.29
+Selandian-Thanetian,58.83,61.66,56,583.0464,401.1538368,818.4139616,Fletcher2008,Montana,,,https://doi.org/10.1038/ngeo.2007.29
+middle Maastrichtian,70,71,69,670.3227,459.4822232,930.7961624,Fletcher2008,Wyoming,,,https://doi.org/10.1038/ngeo.2007.29
+late Albian-Cenomanian,100.375,106.85,93.9,797.1615,543.4202392,1085.142828,Fletcher2008,South Island NZ,,,https://doi.org/10.1038/ngeo.2007.29
+late Albian,103.675,106.85,100.5,829.80755,583.593238,1105.620336,Fletcher2008,Alexander Island Antarctica,,,https://doi.org/10.1038/ngeo.2007.29
+late Albian,103.675,106.85,100.5,977.1945,652.9342376,1340.201204,Fletcher2008,Alexander Island Antarctica,,,https://doi.org/10.1038/ngeo.2007.29
+late Albian,103.675,106.85,100.5,1000.8842,648.8000336,1414.585518,Fletcher2008,Alexander Island Antarctica,,,https://doi.org/10.1038/ngeo.2007.29
+early Albian,110.025,113.2,106.85,653.5093,447.880052,887.2705256,Fletcher2008,SW Alberta CA,,,https://doi.org/10.1038/ngeo.2007.29
+Barremian-Aptian,119.85,126.5,113.2,1050.542,818.7272256,1292.31624,Fletcher2008,Amurskya,,,https://doi.org/10.1038/ngeo.2007.29
+late Berriasian-early Valanginian,137.775,140.4,135.15,982.026,754.7679424,1239.135216,Fletcher2008,East Sussex UK,,,https://doi.org/10.1038/ngeo.2007.29
+Callovian-Oxfordian,160.035,165.29,154.78,697.9102,513.6267376,933.1939184,Fletcher2008,Amurskya,,,https://doi.org/10.1038/ngeo.2007.29
+middle Bajocian,169.5,170,169,636.71275,459.289078,898.980998,Fletcher2008,Yorkshire UK,,,https://doi.org/10.1038/ngeo.2007.29
+Hettangian-Toarcian,188.03,201.36,174.7,919.2214,685.346904,1208.039397,Fletcher2008,Greenland,,,https://doi.org/10.1038/ngeo.2007.29
+Carnian-Toarcian,205.85,237,174.7,387.8278,274.5676144,549.0756624,Fletcher2008,Transantarctic Mtns Antarctica,,,https://doi.org/10.1038/ngeo.2007.29
