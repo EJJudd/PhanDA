@@ -3,8 +3,6 @@ A reconstruction of Phanerozoic global mean surface temperature (GMST) using dat
 
 * [Citation](#citation)
 * [Getting started](#getting-started)
-* [Feedback and contributions](#feedback--contributions)
-* [Repository branches](#branches)
 
 ## Citation
 
