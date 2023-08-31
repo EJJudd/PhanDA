@@ -25,9 +25,16 @@
         <li><a href="#download-the-model-priors"> Download the model priors</a></li>
         <li><a href="#download-the-phansst-proxy-database">Download the PhanSST proxy database</a></li>
         <li><a href="#install-dash-and-update-source-code">Install DASH and update source code</a></li>
+        <li><a href="#set-the-paths-for-global-functions-and-files">Set the paths for global functions and files</a></li>        
       </ul>
     </li>
     <li><a href="#running-the-assimilation">Running the assimilation</a></li>
+       <ul>
+        <li><a href="#make-the-gridfile">Make the gridfile</a></li>
+        <li><a href="#design-the-state-vector-and-build-the-ensemble-file">Design the state vector and build the ensemble file</a></li>
+        <li><a href="#compile-the-y-and-ye-values">Compile the Y and Ye values</a></li>
+        <li><a href="#run-the-assimilation">Run the assimilation</a></li>
+      </ul>
   </ul>
 </br>
 
@@ -162,7 +169,7 @@ To compile the Y and Ye values:
 3. Load the data (`Part 1`)
 4. Pre-treat the data (`Part 2`) - in this step, you'll define the assimilation preferences and corrections (e.g., which proxy system models, which SIMS correction value to apply, etc.). They are currently set to the same settings used in the assimilation of Judd et al. (submitted)
 5. Make, update, or load the local seawater oxygen isotope lookup table (`Part 3`). Note that the lookup table used in the assimilation of Judd et al. (submitted) is currently saved as a global file, so you should be able to just load the existing table (`Option C`); however, if you opt to use a different dataset, plate rotation, or model prior, you will need to make a new table (`Option A`)
-6. Make or load the gloabl seawater pH lookup table (`Part 4`). Note that the lookup table used in the assimilation of Judd et al. (submitted) is currently saved as a global file, so you should be able to just load the existing table (`Option B`); however, if you opt to use a different model prior, you will need to make a new table (`Option A`)
+6. Make or load the global seawater pH lookup table (`Part 4`). Note that the lookup table used in the assimilation of Judd et al. (submitted) is currently saved as a global file, so you should be able to just load the existing table (`Option B`); however, if you opt to use a different model prior, you will need to make a new table (`Option A`)
 7. Parse the data and assemble the Y and Ye values (`Part 5`)
 
 <picture>
@@ -186,4 +193,4 @@ To run the data assimilation:
    <img alt="Complete" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/complete.svg">
 </picture></br>
 
-The outcome of this step should be a new file `Output.mat` that contains the global mean surface temperature (`GMST`), latitudinal temperature gradient (`LTG`), latitudinal sea surface temperature gradient (`LTGsst`),globally gridded posterior percentiles (`TASpost`, 5th, 16th, 50th, 84th, and 95th), globally gridded prior percentiles (`TASprior`), and some additional variables that provide insight into the assimilation and will help with processing the results (`Index`, `Ndata`, `Nandata`, `ItName`, and `Rvals`).
+The outcome of this step should be a new file `Output.mat` that contains the global mean surface temperature (`GMST`), latitudinal temperature gradient (`LTG`), latitudinal sea surface temperature gradient (`LTGsst`), globally gridded posterior percentiles (`TASpost`, 5th, 16th, 50th, 84th, and 95th), globally gridded prior percentiles (`TASprior`), and some additional variables that provide insight into the assimilation and will help with processing the results (`Index`, `Ndata`, `Nandata`, `ItName`, and `Rvals`).
