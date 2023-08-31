@@ -9,8 +9,8 @@ figname = 'Fig4_CO2&Forcings.png';
 savefig = true;        
 
 % Select colormap
-cm_grey = customcolormap(linspace(0,1,2),{'#6A6A6A','#FCFCFC'},75);
-cm_grey = [cm_grey;0,0,0;0,0,0;flipud(cm_grey)];
+cm_grey = customcolormap(linspace(0,1,2),{'#515151','#FCFCFC'},75);
+cm_grey = [cm_grey;0,0,0;flipud(cm_grey)];
 cm_col = hex2rgb(['#0a9396';'#ffb703';'#ca6702'],1);
 
 % PART 1: LOAD DATA
@@ -62,15 +62,17 @@ tiledlayout(6,2,'Padding','none','TileSpacing','compact');
 fig.Units = 'pixels';
 % (b) Plot GMST & CO2
 ax1 = nexttile([3,2]); hold on
-contourf(age_grid, Pgmst, P, 101, 'LineColor', 'none')
+contourf(age_grid, Pgmst, P, length(cm_grey), 'LineColor', 'none')
 colormap(cm_grey)
+caxis([5 95])
 plot(GTS.Average,cell2mat(cellfun(@(x) median(x), GMST, 'UniformOutput', false)),'k-','LineWidth',2)
-ylim([-42,44])
+ylim([-42,44.9])
 ax1.YTick = [10:10:40];
 ylabel(['                 GMST (',char(176),'C)'],'FontName','Arial','FontSize',13,'FontWeight','bold','HorizontalAlignment','left');
+caxis([0 100])
 % (c) Plot CO2
 yyaxis right
-contourf(age_grid(allnocopse,:), log(CO2(allnocopse,:)), P(allnocopse,:), 101, 'LineColor', 'none')
+[~,c1] = contourf(age_grid(allnocopse,:), log(CO2(allnocopse,:)), P(allnocopse,:), length(cm_grey), 'LineColor', 'none');
 plot(GTS.Average(allnocopse),log(median(PhanerozoicCO2(allnocopse,:),2)),'k-','LineWidth',2)
 ylim(log([22,100000]))
 ax1.YTick = log([100,200,500,1000,2000,5000]);
@@ -80,6 +82,7 @@ ax1.FontSize = 11;
 ax1.FontName = 'Arial';
 ylabel(['\fontsize{13}CO','\fontsize{7}2', '\fontsize{13}  (ppmv)'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
 ax1.YColor = 'k';
+caxis([5 95])
 yyaxis left
 geologictimescale(0,GTS.LowerBoundary(end),...
     'normal','reverse',gca,'standard','stages','off',7.5,2)
@@ -115,7 +118,7 @@ plot(X,X*m+b,'k--','LineWidth',2)
 text(log2(175),38,'Phanerozoic','FontName','Arial','FontSize',13,'FontWeight','bold','color','k')
 text(log2(175),38-1.75,['ACS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color','k')
-text(log2(175),38-1.75*2,sprintf('      r = %.02f',corr(median(x(allnocopse,:),2),...
+text(log2(175),38-1.75*2,sprintf('r = %.02f',corr(median(x(allnocopse,:),2),...
     median(y(allnocopse,:),2))),'FontName','Arial','FontSize',11,...
     'FontWeight','bold','color','k')
 % Annotate

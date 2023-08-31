@@ -11,8 +11,10 @@ savefig = true;
 
 % Select colormaps
 % Main GMST colormap:
-cm = customcolormap(linspace(0,1,2),{'#6A6A6A','#FCFCFC'},75);
-cm = [cm;0,0,0;0,0,0;flipud(cm)];
+% Select colormap
+cm = customcolormap(linspace(0,1,2),{'#515151','#FCFCFC'},75);
+cm = [cm;0,0,0;flipud(cm)];
+
 % Color for extinctions
 plotcol = hex2rgb('#CA6702',1);
 % Colormap for extinction uncertainty
@@ -62,7 +64,6 @@ icestage(isnan(icestage)) = 90;
 
 %% PART 3: MAKE FIGURE
 % (a) Initialize figure
-c = rescale(Ndata(:),.1,1,'InputMax',40);
 fig=figure('Name','SummaryGMST','color','w'); 
 fig.Units='inches';sPos = fig.Position;
 fig.Position=[sPos(1),sPos(2),6.5*1.5,3.2*1.5];
@@ -76,6 +77,7 @@ ylim([6 49]);
 ax.YTick = [5:5:40];
 yl = ylim;
 plot(GTS.Average,cell2mat(cellfun(@(x) median(x), GMST, 'UniformOutput', false)),'k-','LineWidth',2)
+caxis([5 95])
 % (c) Plot Extinctions
 icon = double(icon);
 icon(:,:,1) = plotcol(1);
@@ -114,7 +116,7 @@ for ii = 1:numel(timing)
 end
 % (d) Tidy axes
 geologictimescale(0,GTS.LowerBoundary(size(P,1)),...
-    'normal','reverse',gca,'standard','stages','off',8.5,1)
+    'normal','reverse',gca,'standard','all','off',5.5,1)
 yyaxis('left')
 ax.FontSize = 11;ax.FontName = 'Arial';
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
@@ -139,7 +141,7 @@ yl.Position = [-13,65,-1];
 pause(1)
 leg=colorbar('north');
 pause(1)
-leg.Position=[.59,.95,.225,.03];
+leg.Position=[.5865,.95,.225,.03];
 leg.FontSize = 11;
 pause(1)
 xlabel(leg,'Percentile','FontName','Arial','FontSize',13,'FontWeight','bold')

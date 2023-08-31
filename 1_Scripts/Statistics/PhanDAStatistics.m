@@ -99,6 +99,11 @@ end
 % p-value is 0.175, so the correlation is not significant
 % the absolute value of r is less than the critical value and the
 % p-value is <<.05, so the correlation is significant
+% Cenozoic and Paleozoic combined
+[~,mCP,~,smCP] = york_fit(pco2([paleonocopse;cenozoic],p==50)',...
+    pgmst([paleonocopse;cenozoic],p==50)',(range(pco2([paleonocopse;cenozoic],:),2)./2)',...
+    (range(pgmst([paleonocopse;cenozoic],:),2)./2)', 0);
+
 
 % Time weight GMST
 [TWave, TWstd] = timeweight(pgmst(:,p==50),[GTS.UpperBoundary(1);GTS.LowerBoundary]);
@@ -181,8 +186,7 @@ fprintf("The maximum reconstructed GMST of %.0fC occurred in the %s.\n",...
 % (2) correlation coefficient between GMST and the benthic stack
 fprintf("The correlation coefficient between PhanDA and the benthic stack is: %.2f\n",...
     rBS)
-fprintf("The correlation coefficient between PhanDA and the benthic stack is: %.2f (p-value = %.04f\n",...
-    rBS,pvalBS)
+
 
 % Phanerozoic climate states and latitudinal gradients
 % (1) percent of time spent in icehouse and greenhouse states
@@ -193,8 +197,8 @@ fprintf("%.0f%s of the Phanerozoic was spent in an icehouse state\n",...
 fprintf("%.0f%s of the Phanerozoic was spent in a coldhouse state\n",...
     CStime.ih,"%")
 % (2) correlation coefficient between GMST and LTG
-fprintf("The correlation coefficient between GMST and the LTG is: %.2f (p-value = %.04f\n",...
-    rBS,pvalBS)
+fprintf("The correlation coefficient between GMST and the LTG is: %.2f (p-value = %.04f)\n",...
+    rLTG,pvalLTG)
 % (3) coldhouse LTG range
 fprintf("The LTG ranges between %.0f and %.0fC during coldhouse intervals\n",...
     min(ltgsat(CSidx.ih)),max(ltgsat(CSidx.ih)))
@@ -218,7 +222,7 @@ fprintf("The average tropical SAT ranges between %.0f and %.0fC (median = %.0f) 
     min(tropsat([CSidx.ch;CSidx.ih])),max(tropsat([CSidx.ch;CSidx.ih])),...
     median(tropsat([CSidx.ch;CSidx.ih])))
 % (10) Average tropical temperatures during greenhouse intervals
-fprintf("The average tropical SAT ranges between %.0f and %.0fC (median = %.0f) during icehouse intervals\n",...
+fprintf("The average tropical SAT ranges between %.0f and %.0fC (median = %.0f) during greenhouse intervals\n",...
     min(tropsat([CSidx.gh;CSidx.hh])),max(tropsat([CSidx.gh;CSidx.hh])),...
     median(tropsat([CSidx.gh;CSidx.hh])))
 % (11) Tropical SSTs during the Turonian and PETM
@@ -263,4 +267,6 @@ fprintf('The Phanerozoic ACS is %.1f %s %.1f\n', mA,char(177),smA);
 fprintf('The Cenozoic ACS is %.1f %s %.1f\n', mC,char(177),smC);
 % (11) Paleozoic ACS
 fprintf('The Paleozoic ACS is %.1f %s %.1f\n', mP,char(177),smP);
+% (12) Paleozoic ACS
+fprintf('The Cenozoic & Paleozoic ACS is %.1f %s %.1f\n', mCP,char(177),smCP);
 

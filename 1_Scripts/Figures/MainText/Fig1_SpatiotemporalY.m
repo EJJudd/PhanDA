@@ -84,7 +84,7 @@ ax1.YTick = [0:5:40];
 geologictimescale(GTS.UpperBoundary(14),GTS.LowerBoundary(size(GMSTprior,1)),'normal','reverse',ax1,'standard','stages','off',10,1)    
 ylabel('Assimilated values (N)','FontName','Arial','FontWeight','bold','FontSize',13)
 Xtext = 470;
-Ytext = linspace(44,33,5);
+Ytext = linspace(44,30,5);
 for ii = 1:numel(Ytext)
     text(ax1, Xtext,Ytext(ii),PlotSpecs.Proxy(ii),'FontName','Arial',...
         'FontSize',13,'FontWeight','bold','Color',PlotSpecs.Color(ii,:))

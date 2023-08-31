@@ -141,49 +141,49 @@ Temp{6,1}{1,1} = [14.15,14.15,14.15];
 
 % Ring et al., 2022
 % https://doi.org/10.1029/2021PA004364
-GMST_Ring = readtable("/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/4_GlobalFiles/GMST/GMST_Ring.xlsx");
+load("GMST_ring.mat","GMST_Ring")
 idx = [5,8,11,14];
 % Reporting range of values
 Ref{7,1} = "Ring et al., 2022";
 %Middle Pliocene
 Stage{7,1}(1,1) = "Zanclean";
 Age{7,1}{1,1} = [GMST_Ring.MiddlePliocene(1),GMST_Ring.MiddlePliocene(2)];
-Temp{7,1}{1,1} = 14.15 + [min(GMST_Ring.MiddlePliocene(idx)),...
+Temp{7,1}{1,1} = 14.4 + [min(GMST_Ring.MiddlePliocene(idx)),...
     GMST_Ring.MiddlePliocene(idx(end)),max(GMST_Ring.MiddlePliocene(idx))];
 %Late Miocene
 Stage{7,1}(2,1) = "Tortonian";
 Age{7,1}{2,1} = [GMST_Ring.LateMiocene(1),GMST_Ring.LateMiocene(2)];
-Temp{7,1}{2,1} = 14.15 + [min(GMST_Ring.LateMiocene(idx)),...
+Temp{7,1}{2,1} = 14.4 + [min(GMST_Ring.LateMiocene(idx)),...
     GMST_Ring.LateMiocene(idx(end)),max(GMST_Ring.LateMiocene(idx))];
 %Middle Miocene
 Stage{7,1}(3,1) = "Langhian/Burdigalian";
 Age{7,1}{3,1} = [GMST_Ring.MiddleMiocene(1),GMST_Ring.MiddleMiocene(2)];
-Temp{7,1}{3,1} = 14.15 + [min(GMST_Ring.MiddleMiocene(idx)),...
+Temp{7,1}{3,1} = 14.4 + [min(GMST_Ring.MiddleMiocene(idx)),...
     GMST_Ring.MiddleMiocene(idx(end)),max(GMST_Ring.MiddleMiocene(idx))];
 %Early Miocene
 Stage{7,1}(4,1) = "Aquitanian";
 Age{7,1}{4,1} = [GMST_Ring.EarlyMiocene(1),GMST_Ring.EarlyMiocene(2)];
-Temp{7,1}{4,1} = 14.15 + [min(GMST_Ring.EarlyMiocene(idx)),...
+Temp{7,1}{4,1} = 14.4 + [min(GMST_Ring.EarlyMiocene(idx)),...
     GMST_Ring.EarlyMiocene(idx(end)),max(GMST_Ring.EarlyMiocene(idx))];
 %Early Oligocene
 Stage{7,1}(5,1) = "Rupelian";
 Age{7,1}{5,1} = [GMST_Ring.EarlyOligocene(1),GMST_Ring.EarlyOligocene(2)];
-Temp{7,1}{5,1} = 14.15 + [min(GMST_Ring.EarlyOligocene(idx)),...
+Temp{7,1}{5,1} = 14.4 + [min(GMST_Ring.EarlyOligocene(idx)),...
     GMST_Ring.EarlyOligocene(idx(end)),max(GMST_Ring.EarlyOligocene(idx))];
 %Late Eocene
 Stage{7,1}(6,1) = "Priabonian";
 Age{7,1}{6,1} = [GMST_Ring.LateEocene(1),GMST_Ring.LateEocene(2)];
-Temp{7,1}{6,1} = 14.15 + [min(GMST_Ring.LateEocene(idx)),...
+Temp{7,1}{6,1} = 14.4 + [min(GMST_Ring.LateEocene(idx)),...
     GMST_Ring.LateEocene(idx(end)),max(GMST_Ring.LateEocene(idx))];
 %Middle Eocene
 Stage{7,1}(7,1) = "Lutetian";
 Age{7,1}{7,1} = [GMST_Ring.MiddleEocene(1),GMST_Ring.MiddleEocene(2)];
-Temp{7,1}{7,1} = 14.15 + [min(GMST_Ring.MiddleEocene(idx)),...
+Temp{7,1}{7,1} = 14.4 + [min(GMST_Ring.MiddleEocene(idx)),...
     GMST_Ring.MiddleEocene(idx(end)),max(GMST_Ring.MiddleEocene(idx))];
 %Early Eocene
 Stage{7,1}(8,1) = "Ypresian";
 Age{7,1}{8,1} = [GMST_Ring.EarlyEocene(1),GMST_Ring.EarlyEocene(2)];
-Temp{7,1}{8,1} = 14.15 + [min(GMST_Ring.EarlyEocene(idx)),...
+Temp{7,1}{8,1} = 14.4 + [min(GMST_Ring.EarlyEocene(idx)),...
     GMST_Ring.EarlyEocene(idx(end)),max(GMST_Ring.EarlyEocene(idx))];
 
 % Eichenseer & Jones, 2023

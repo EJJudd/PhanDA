@@ -1,0 +1,6 @@
+EXPORT	gsdll_revision.1
+EXPORT	gsdll_init.2
+EXPORT	gsdll_execute_begin.3
+EXPORT	gsdll_execute_cont.4
+EXPORT	gsdll_execute_end.5
+EXPORT	gsdll_exit.6

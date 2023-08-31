@@ -8,7 +8,7 @@ figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/Phan
 savefig = true;
 
 % Select colormap
-cm = hex2rgb({'#004F60','#0A9396','#c6c6c6','#CA6702','#9B2226'},1);
+cm = hex2rgb({'#004F60';'#0a9396';'#ffb703';'#ca6702';'#9b2226'},1);
 
 % PART 1: LOAD DATA
 % Directory details
@@ -35,42 +35,46 @@ endsize = size(GMST,1) - numel(Preferences.combstages(1,:));
 GTS = combinestages(GTS,"GTS",Preferences,endsize);
 GMST = combinestages(GMST,"GMST",Preferences,endsize,1);
 
-% SCOTESE
-load("GMST_Scotese.mat")
-bins = [GTS.UpperBoundary(1);GTS.LowerBoundary+.00000001];
-binidx = discretize(GMST_Scotese.Age,bins);
-GMSTscotese(:,1) = accumarray(binidx(~isnan(binidx)),GMST_Scotese.GMST(~isnan(binidx)),[],@mean);
-GMSTscotese(GMSTscotese == 0) = NaN;
+% Scotese 2021 (updated by van der Meer et al., 2022)
+load("GMST_vanderMeer.mat")
+% Valdes et al., 2021
+load("GMST_Valdes.mat")
+% Mills et al., 2021
+load("GMST_Mills.mat")
 
-% LUNT
-load("GMST_Lunt.mat")
-x = 0:1:505;
-y = interp1(GMST_Lunt.Time,GMST_Lunt.GMST,x);
-binidx = discretize(x,bins)';
-GMSTlunt(:,1) = accumarray(binidx(~isnan(binidx)),y(~isnan(binidx))',[],@mean);
-GMSTlunt(GMSTlunt == 0) = NaN;
 
 %% MAKE FIGURE
 figname = 'SupFig_LitCompPhanerozoic.png';
 fig = figure('Position',[-1248,491,479*2,420],'Color','w'); 
 hold on, box on
+% Plot PhanDA GMST
 GMSTmedian = cell2mat(cellfun(@(x) prctile(x,[5,16,50,84,95]), GMST, 'UniformOutput', false));
-fill([GTS.Average;flipud(GTS.Average)],[GMSTmedian(:,1);flipud(GMSTmedian(:,end))],'k','FaceColor',[.85 .85 .85],'EdgeColor','none');
-fill([GTS.Average;flipud(GTS.Average)],[GMSTmedian(:,2);flipud(GMSTmedian(:,end-1))],'k','FaceColor',[.65 .65 .65],'EdgeColor','none');
+fill([GTS.Average;flipud(GTS.Average)],[GMSTmedian(:,1);...
+    flipud(GMSTmedian(:,end))],'k','FaceColor',[.85 .85 .85],'EdgeColor','none');
+fill([GTS.Average;flipud(GTS.Average)],...
+    [GMSTmedian(:,2);flipud(GMSTmedian(:,end-1))],'k','FaceColor',...
+    [.65 .65 .65],'EdgeColor','none');
 p1 = plot(GTS.Average,GMSTmedian(:,3),'k-','LineWidth',2);
-binidx = discretize(GMST_Scotese.Age,bins);
-p2 = plot(GMST_Scotese.Age(~isnan(binidx)),GMST_Scotese.GMST(~isnan(binidx)),'-','LineWidth',1.5,'Color',cm(2,:));
-p3 = plot(GTS.Average,GMSTscotese(:,1),'-','LineWidth',2,'Color',cm(1,:));
-binidx = discretize(x,bins);
-p4 = plot(x(~isnan(binidx)),y(~isnan(binidx)),'-','LineWidth',1.5,'Color',cm(end-1,:));
-p5 = plot(GTS.Average,GMSTlunt(:,1),'-','LineWidth',2,'Color',cm(end,:));
-pempty = plot(0,0,'-','Color','none');
+% Plot Scotese/van der Meer GMST
+fill([GMST_vanderMeer.Age;flipud(GMST_vanderMeer.Age)],...
+    [GMST_vanderMeer.GMST(:,1);flipud(GMST_vanderMeer.GMST(:,3))],...
+    'k','FaceColor',cm(2,:),'EdgeColor','none','FaceAlpha',.25);
+p2 = plot(GMST_vanderMeer.Age,GMST_vanderMeer.GMST(:,2),'-','LineWidth',2,'Color',cm(2,:));
+% Plot Mills GMST
+fill([GMST_Mills.Age;flipud(GMST_Mills.Age)],...
+    [GMST_Mills.GMST(:,1);flipud(GMST_Mills.GMST(:,3))],...
+    'k','FaceColor',cm(3,:),'EdgeColor','none','FaceAlpha',.25);
+p3 = plot(GMST_Mills.Age,GMST_Mills.GMST(:,2),'-','LineWidth',2,'Color',cm(3,:));
+p4 = plot(GMST_Valdes.Age,GMST_Valdes.Foster,'-','LineWidth',2,'Color',cm(4,:));
+p5 = plot(GMST_Valdes.Age,GMST_Valdes.Smooth,'-','LineWidth',2,'Color',cm(5,:));
 geologictimescale(0,GTS.LowerBoundary(end),...
     'normal','reverse',gca,'standard','stages','off',9,2)
-leg = legend([p1, pempty, p2, p3, p4, p5], {'PhanDA', '', ...
-    'Scotese et al. (1 myr)','Scotese et al. (stage)',...
-    'Valdes et al. (model timestep)','Valdes et al. (stage)'}, ...
-    'NumColumns',3,'Location','north','FontName','Arial','FontSize',11);
+leg = legend([p1, p2, p3, p4, p5], {'PhanDA', ...
+    ['Scotese et al., 2021',newline,'(updated by van der Meer et al., 2022)'],...
+    'Mills et al., 2021',...
+    ['Valdes et al., 2021',newline,'(smoothed CO_2)'],...
+    ['Valdes et al., 2021',newline,'(Foster et al., 2017 CO_2)']}, ...
+    'Orientation','horizontal','Location','northoutside','FontName','Arial','FontSize',11);
 set(gca,'FontName','Arial','FontSize',11)
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
 ylabel(['GMST (',char(176),'C)'],'FontName','Arial','FontSize',13,'FontWeight','bold')

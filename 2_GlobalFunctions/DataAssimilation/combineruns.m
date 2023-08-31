@@ -1,4 +1,6 @@
 function [varout, dims] = combineruns(varin,idx,catdim)
+% Set seed for reproduceability
+rng(1,'twister')
 
 varin = varin(:,idx);
 varout = cell(size(varin,1),1);
