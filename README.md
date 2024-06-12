@@ -7,6 +7,15 @@
 ---
 </br>
 
+This repository contains all the necessary scripts and functions to reproduce the data assimilation presented in:
+
+Judd, E.J., Tierney, J.E., Lunt, D.J., Montañez, I.P., Huber, B.T., Wing, S.L., & Valdes, P.J. 
+A 485 million-year history of Earth's surface temperature. 
+*Science* (in revision).
+
+A csv file containing the 5th, 16th, 50th, 84th, and 95th percentiles of PhanDA's reconstructed GMST and CO2 can be found in the subfolder entitled 5_Outputs. Otherwise, you can follow the instructions below to run your own assimilation.
+
+
 ## Table of Contents
   <ul>
     <li>
@@ -40,9 +49,9 @@
 
 <h2 id="citation" align="center"> Citation </h2>
 
-Judd, E.J., Tierney, J.E., Lunt, D.J., Montañez, I.P., Huber, B.T., Wing, S.L., & Valdes, P.J. (2023). 
-A 485 million year history of Earth's surface temperature. 
-*Science* (submitted).
+Judd, E.J., Tierney, J.E., Lunt, D.J., Montañez, I.P., Huber, B.T., Wing, S.L., & Valdes, P.J. 
+A 485 million-year history of Earth's surface temperature. 
+*Science* (in revision).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
