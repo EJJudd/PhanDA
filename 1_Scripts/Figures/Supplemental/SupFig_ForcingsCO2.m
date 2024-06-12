@@ -5,7 +5,7 @@
                           
 % Figure details
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures';
-savefig = true;        
+savefig = false;        
 
 % Select colormap
 cm_grey = customcolormap(linspace(0,1,2),{'#6A6A6A','#ECECEC'},50);
@@ -14,8 +14,8 @@ cm_col = hex2rgb(['#0a9396';'#ffb703';'#ca6702'],1);
 
 % PART 1: LOAD DATA
 % Directory details
-assdate = '27Jul2023';
-assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
+assdate = '21May2024';
+assdir = ['/Users/emilyjudd/Documents/PhanDA/5_Outputs/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 load([assdir,'/OutputWorkspaces/','Output.mat'],"GMST","Ndata","Index","ItName")
 load([assdir,'/InputWorkspaces/','YYe.mat'],"Preferences")
@@ -29,10 +29,11 @@ lsmask = struct2cell(lsmask);
 % PART 2: PRE-TREAT DATA
 % Select iterations to use
 pHCorr = ["ens","rec"];
-sbCorr = [true, false];
+swCorr = ["snowball", "veizer","off"];
+%swCorr = "veizer";
 rMeth = ["low","medium","high"];
-idx = contains(ItName,strcat("phCorr = ",string(pHCorr))) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
+    contains(ItName,strcat("SeawaterCorr = ",swCorr)) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GMST = combineruns(GMST,idx,1);
 
@@ -72,7 +73,7 @@ albedo_lin = interp1(a,b,GTS.Average);
 
 %% Plot Figure
 figname = 'SupFig_Forcings.png';
-fig = figure('Position',[-1290,41,715,744],'Color','w');
+fig = figure('Position',[-1290,41,665,700],'Color','w');
 t = tiledlayout(3,5,'Padding','none','TileSpacing','compact');
 cm = hex2rgb({'#004F60';'#0a9396';'#ffb703';'#ca6702';'#9b2226'},1);
 % Panel 1: Forcings assuming constant solar
@@ -87,11 +88,11 @@ geologictimescale(0,GTS.LowerBoundary(allnocopse(end)),'normal','reverse',gca,'s
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
 ylabel('\DeltaF (Wm^{-2})','FontName','Arial','FontSize',13,'FontWeight','bold')
 text(450,15.5,"A",'FontWeight','bold','FontName','Arial','FontSize',15,'Color','k')
-text(450,13.5,"Constant α (0.29); no F\fontsize{9}surface",'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')
-text(100,-3.5,"Total forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color','k')
-text(100,-5.5,"CO\fontsize{7}2 \fontsize{11}forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color',cm(2,:))
-text(100,-7.5,"Solar forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color',cm(3,:))
-text(100,-9.5,"Surface forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color',cm(4,:))
+text(450,13.5,"Constant α (0.29); no F\fontsize{9}geog",'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')
+text(5,-3.5,"Total forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color','k','HorizontalAlignment','right')
+text(5,-5.5,"CO\fontsize{7}2 \fontsize{11}forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color',cm(2,:),'HorizontalAlignment','right')
+text(5,-7.5,"Solar forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color',cm(3,:),'HorizontalAlignment','right')
+text(5,-9.5,"Geographic forcing",'FontWeight','bold','FontName','Arial','FontSize',11,'Color',cm(4,:),'HorizontalAlignment','right')
 % Panel 2: Constant crossplot
 nexttile([1,2]); hold on, box on
 X = prctile(dFtot_con,p,2);
@@ -110,7 +111,8 @@ for ii = 1:size(X,1)
     end
 end
 xlim([-13 18])
-ylim([6 45])
+% ylim([6 45])
+ylim([-10 45])
 text(-12.25,42.5,"B",'FontWeight','bold','FontName','Arial','FontSize',15,'Color','k')
 text(-12,40,sprintf("r = %.02f",corr(X(allnocopse,p==50),Y(allnocopse,p==50))),...
     'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')
@@ -131,7 +133,7 @@ geologictimescale(0,GTS.LowerBoundary(allnocopse(end)),'normal','reverse',gca,'s
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
 ylabel('\DeltaF (Wm^{-2})','FontName','Arial','FontSize',13,'FontWeight','bold')
 text(450,15.5,"C",'FontWeight','bold','FontName','Arial','FontSize',15,'Color','k')
-text(450,13.5,"Linear α (0.26 - 0.29); no F\fontsize{9}surface",'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')
+text(450,13.5,"Linear α (0.26 - 0.29); no F\fontsize{9}geog",'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')
 % Panel 4: Linear crossplot
 nexttile([1,2]); hold on, box on
 X = prctile(dFtot_lin,p,2);
@@ -150,7 +152,8 @@ for ii = 1:size(X,1)
     end
 end
 xlim([-13 18])
-ylim([6 45])
+%ylim([6 45])
+ylim([-10 45])
 text(-12.25,42.5,"D",'FontWeight','bold','FontName','Arial','FontSize',15,'Color','k')
 text(-12,40,sprintf("r = %.02f",corr(X(allnocopse,p==50),Y(allnocopse,p==50))),...
     'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')
@@ -188,7 +191,8 @@ for ii = 1:size(X,1)
     end
 end
 xlim([-13 18])
-ylim([6 45])
+%ylim([6 45])
+ylim([-10 45])
 text(-12.25,42.5,"F",'FontWeight','bold','FontName','Arial','FontSize',15,'Color','k')
 text(-12,40,sprintf("r = %.02f",corr(X(allnocopse,p==50),Y(allnocopse,p==50))),...
     'FontWeight','bold','FontName','Arial','FontSize',13,'Color','k')

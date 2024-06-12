@@ -24,7 +24,7 @@
 % supplemental figure.
 
 % DEFINE DIRECTORIES & READ IN DATA
-datadir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/5_NonGlobalFiles/SeawaterChemAssumptions';
+datadir = '/Users/emilyjudd/Documents/PhanDA/4_NonGlobalFiles/SeawaterChemAssumptions';
 savedir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/4_GlobalFiles/PSMs/seawaterchem';
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures/Supplemental';
 fileNames = string({dir([datadir,'/co2*']).name});
@@ -193,6 +193,9 @@ cm_grey = [cm_grey;0,0,0;0,0,0;flipud(cm_grey)];
 % Color for extinctions
 cm_col = hex2rgb(['#004F60';'#0a9396';'#b4be65';'#ffb703';'#ca6702';'#9B2226';'#000000'],1);
 
+load("PhanerozoicCO2v9.mat")
+load("PhanerozoicpHv6.mat")
+
 % PANEL 1: CO2 Proxy data
 ax1 = nexttile; hold on
 fn = unique(type_all);
@@ -227,14 +230,16 @@ geologictimescale(0,GTS.LowerBoundary(GTS.Stage=="Tremadocian"),'normal',...
 ax1.YAxis(2).MinorTick = 'on';
 ax1.YAxis(2).MinorTickValues = log([100:100:1000,2000:1000:5000]);
 ylabel(['\fontsize{13}CO','\fontsize{7}2', '\fontsize{13}  (ppmv)'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
-text(ax1,483.5,9.1,'A','FontSize',15,'FontWeight','bold','FontName','Arial')
 
 % PANEL 2: CO2 CURVE
 ax2 = nexttile; hold on
 P = [5:1:95];
-CO2 = prctile(PhanerozoicCO2,P,2);
-[P,age_grid] = meshgrid(P,GTS.Average);
-contourf(age_grid, log(CO2), P, 152, 'LineColor', 'none')
+fill([GTS.Average;flipud(GTS.Average)],...
+    log([prctile(PhanerozoicCO2,5,2);flipud(prctile(PhanerozoicCO2,95,2))]),...
+    'k','FaceAlpha',.25,'EdgeColor','none')
+fill([GTS.Average;flipud(GTS.Average)],...
+    log([prctile(PhanerozoicCO2,16,2);flipud(prctile(PhanerozoicCO2,84,2))]),...
+    'k','FaceAlpha',.25,'EdgeColor','none')
 plot(GTS.Average,log(median(PhanerozoicCO2,2)),'k-','LineWidth',2)
 ylim(log([75,7500]))
 ax2.YTick = log([100,200,500,1000,2000,5000]);
@@ -242,29 +247,21 @@ ax2.YAxis.MinorTick = 'on';
 ax2.YAxis.MinorTickValues = log([100:100:1000,2000:1000:5000]);
 ax2.YTickLabel = ["100","200","500","1000","2000","5000"];
 ax2.FontSize = 11; ax1.FontName = 'Arial';
-colormap(cm_grey)
 geologictimescale(0,GTS.LowerBoundary(GTS.Stage=="Tremadocian"),'normal',...
     'reverse',ax2,'standard','stages','off',8,1)
 ax2.YAxis(2).MinorTick = 'on';
 ax2.YAxis(2).MinorTickValues = log([100:100:1000,2000:1000:5000]);
 ylabel(['\fontsize{13}CO','\fontsize{7}2', '\fontsize{13}  (ppmv)'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
 box on
-text(ax2,483.5,8.65,'B','FontSize',15,'FontWeight','bold','FontName','Arial')
 
 % PANEL 3: Foster Comparison
 ax3 = nexttile; hold on
-datadir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/5_NonGlobalFiles';
+datadir = '/Users/emilyjudd/Documents/PhanDA/4_NonGlobalFiles/DataFiles';
 load([datadir,'/FosterCO2.mat'])
-F = discretize(FosterCO2(:,1),StageEdges);
+load([datadir,'/CENCO2PIP.mat'])
 FosterCO2(FosterCO2<0) = 1;
-FosterCO2_Stage = NaN(size(GTS,1),1);
-for ii = 1:size(GTS,1)
-    try
-    FosterCO2_Stage(ii) = mean(FosterCO2(F==ii,4));
-    end
-end
 fill([GTS.Average;flipud(GTS.Average)],...
-    log([prctile(PhanerozoicCO2,2.5,2);flipud(prctile(PhanerozoicCO2,97.5,2))]),...
+    log([prctile(PhanerozoicCO2,5,2);flipud(prctile(PhanerozoicCO2,95,2))]),...
     'k','FaceAlpha',.25,'EdgeColor','none')
 fill([GTS.Average;flipud(GTS.Average)],...
     log([prctile(PhanerozoicCO2,16,2);flipud(prctile(PhanerozoicCO2,84,2))]),...
@@ -277,7 +274,15 @@ fill([FosterCO2(:,1);flipud(FosterCO2(:,1))],...
     log([FosterCO2(:,3);flipud(FosterCO2(:,5))]),...
     cm_col(1,:),'FaceAlpha',.25,'EdgeColor','none')
 plot(FosterCO2(:,1),log(FosterCO2(:,4)),'-','LineWidth',2,'Color',cm_col(1,:))
-plot(GTS.Average,log(FosterCO2_Stage),'--','LineWidth',2,'Color',cm_col(2,:))
+fill([CENCO2PIP.Age;flipud(CENCO2PIP.Age)],...
+    log([CENCO2PIP.CO2(:,1);flipud(CENCO2PIP.CO2(:,5))]),...
+    cm_col(4,:),'FaceAlpha',.25,'EdgeColor','none')
+fill([CENCO2PIP.Age;flipud(CENCO2PIP.Age)],...
+    log([CENCO2PIP.CO2(:,2);flipud(CENCO2PIP.CO2(:,4))]),...
+    cm_col(4,:),'FaceAlpha',.25,'EdgeColor','none')
+plot(CENCO2PIP.Age(:,1),log(CENCO2PIP.CO2(:,3)),'-','LineWidth',2,'Color',cm_col(4,:))
+
+
 ylim(log([75,7500]))
 ax3.YTick = log([100,200,500,1000,2000,5000]);
 ax3.YAxis.MinorTick = 'on';
@@ -290,31 +295,35 @@ ax3.YAxis(2).MinorTick = 'on';
 ax3.YAxis(2).MinorTickValues = log([100:100:1000,2000:1000:5000]);
 ylabel(['\fontsize{13}CO','\fontsize{7}2', '\fontsize{13}  (ppmv)'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
 box on
-text(ax3,483.5,8.65,'C','FontSize',15,'FontWeight','bold','FontName','Arial')
 text(ax3,5,log(5700),'PhanDA','FontSize',13,'FontName','Arial',...
     'HorizontalAlignment','right')
 text(ax3,5,log(3900),'Foster et al., 2017','FontSize',13,'FontName',...
     'Arial','Color',cm_col(1,:),'HorizontalAlignment','right')
-text(ax3,5,log(2650),'Foster et al., 2017','FontSize',13,'FontName',...
-    'Arial','Color',cm_col(2,:),'HorizontalAlignment','right')
-text(ax3,5,log(1975),'(stage averaged)','FontSize',11,'FontName','Arial',...
-    'Color',cm_col(2,:),'HorizontalAlignment','right')
+text(ax3,5,log(2650),'CENCO2PIP, 2023','FontSize',13,'FontName',...
+    'Arial','Color',cm_col(4,:),'HorizontalAlignment','right')
 
 
 % PANEL 4: Seawater pH curve 
 ax4 = nexttile; hold on
 P = [5:1:95];
-pH = prctile(PhanerozoicpH,P,2);
-[P,age_grid] = meshgrid(P,GTS.Average);
-contourf(age_grid, pH, P, 152, 'LineColor', 'none')
-plot(GTS.Average,median(PhanerozoicpH,2),'k-','LineWidth',2)
+fill([GTS.Average;flipud(GTS.Average)],...
+    ([prctile(PhanerozoicpH,5,2);flipud(prctile(PhanerozoicpH,95,2))]),...
+    'k','FaceAlpha',.25,'EdgeColor','none')
+fill([GTS.Average;flipud(GTS.Average)],...
+    ([prctile(PhanerozoicpH,16,2);flipud(prctile(PhanerozoicpH,84,2))]),...
+    'k','FaceAlpha',.25,'EdgeColor','none')
+plot(GTS.Average,(median(PhanerozoicpH,2)),'k-','LineWidth',2)
 ax4.FontSize = 11; ax1.FontName = 'Arial';
-colormap(cm_grey)
 geologictimescale(0,GTS.LowerBoundary(GTS.Stage=="Tremadocian"),'normal',...
     'reverse',ax4,'standard','stages','off',8,1)
 ylabel(['\fontsize{13}pH','\fontsize{7}sw'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
 xlabel('\fontsize{13}Age (Ma)','FontName','Arial','FontWeight','bold','Interpreter','tex')
 box on
+
+
+text(ax1,483.5,9.1,'A','FontSize',15,'FontWeight','bold','FontName','Arial')
+text(ax2,483.5,8.65,'B','FontSize',15,'FontWeight','bold','FontName','Arial')
+text(ax3,483.5,8.65,'C','FontSize',15,'FontWeight','bold','FontName','Arial')
 text(ax4,483.5,8.45,'D','FontSize',15,'FontWeight','bold','FontName','Arial')
 
 export_fig(fig,[figdir,'/SupFig_GlobalCO2.png'],'-p0.01','-m5')

@@ -18,9 +18,9 @@ Data.Environment(Data.SiteName=="Askyn"&Data.Stage=="Serpukhovian") = "restricte
 % --> (3) Buggisch et al., 2008
 %         Combine data from Tellego & Mirador de Vegamian
 Data.PaleoLat(Data.SiteName=="Tellego"&Data.Stage=="Serpukhovian") = ...
-    unique(Data.PaleoLat(Data.SiteName=="Mirador De Vegamian"));
+    unique(Data.PaleoLat(Data.SiteName=="Mirador De Vegamian"&Data.Stage=="Serpukhovian"));
 Data.PaleoLon(Data.SiteName=="Tellego"&Data.Stage=="Serpukhovian") = ...
-    unique(Data.PaleoLon(Data.SiteName=="Mirador De Vegamian"));
+    unique(Data.PaleoLon(Data.SiteName=="Mirador De Vegamian"&Data.Stage=="Serpukhovian"));
 
 % --> (4) Frank et al., 2015
 %         deglacial/interglacial data

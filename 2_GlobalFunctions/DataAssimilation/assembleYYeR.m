@@ -1,5 +1,5 @@
 function [Yuse, Yeuse, Ruse, proxytype, paleolat, paleolon] = assembleYYeR( ...
-    UPD, Y, Ye, Rvals, Assumptions, pHcorr, snowballcorr, Rmethod, a)
+    UPD, Y, Ye, Rvals, Assumptions, pHcorr, seawatercorr, Rmethod, a)
 
 
 fn = fieldnames(Y);
@@ -16,10 +16,12 @@ for ii = 1:numel(fn)
     
     % Amass Ye
     Yetemp = Ye.(fn{ii});
-    % Add in snowball correction if applicable
+    % Add in seawater d18O correction if applicable
     if contains(fn(ii),{'d18a','d18c','d18p'})
-        if snowballcorr
+        if seawatercorr == "snowball"
             Yetemp = Yetemp + Assumptions.global.d18Osw.Snowball;
+        elseif seawatercorr == "veizer"
+            Yetemp = Yetemp + Assumptions.global.d18Osw.Veizer;
         end
     end
     % Add in pH correction if applicable

@@ -7,13 +7,12 @@
 % Figure details
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures/';
 figname = 'Fig2_PhanerozoicGMST.png';
-savefig = true;
+savefig = false;
 
 % Select colormaps
 % Main GMST colormap:
 % Select colormap
-cm = customcolormap(linspace(0,1,2),{'#515151','#FCFCFC'},75);
-cm = [cm;0,0,0;flipud(cm)];
+cm = customcolormap(linspace(0,1,3),{'#515151','#B8B8B8','#ECECEC'},5);
 
 % Color for extinctions
 plotcol = hex2rgb('#CA6702',1);
@@ -48,10 +47,8 @@ endsize = size(GMST,1) - numel(Preferences.combstages(1,:));
 GMST = combinestages(GMST,"GMST",Preferences,endsize,1);
 GTS = combinestages(GTS,"GTS",Preferences,endsize,1);
 % Calculate percentiles
-prctiles = [5:1:95];
+prctiles = [5,10,16,25,40,50,60,75,84,90,95];
 P = cell2mat(cellfun(@(x) prctile(x, prctiles), GMST, 'UniformOutput', false));
-[prctiles,age_grid] = meshgrid(prctiles,GTS.Average);
-
 
 % Calculate ice extent by stage
 icestage = NaN(size(GTS,1),1);
@@ -71,8 +68,10 @@ fig.Units='pixels';
 pause(0.5)
 % (b) Plot GMST
 ax = axes('Position',[.05,.1125,.9,.875]); hold on
-contourf(age_grid, P, prctiles, 152, 'LineColor', 'none')
-colormap(cm)
+for ii = 1:5
+    fill([GTS.Average;flipud(GTS.Average)],...
+        [P(:,ii);flipud(P(:,end+1-ii))],'k','FaceColor',cm(ii,:),'EdgeColor','none');
+end
 ylim([6 49]);
 ax.YTick = [5:5:40];
 yl = ylim;
@@ -116,11 +115,11 @@ for ii = 1:numel(timing)
 end
 % (d) Tidy axes
 geologictimescale(0,GTS.LowerBoundary(size(P,1)),...
-    'normal','reverse',gca,'standard','all','off',5.5,1)
+    'normal','reverse',gca,'standard','all','off',5.5,1,'helvetica',11,'k','k')
 yyaxis('left')
-ax.FontSize = 11;ax.FontName = 'Arial';
-xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
-ylabel(['GMST (',char(176),'C)'],'FontName','Arial','FontSize',13,...
+ax.FontSize = 11;ax.FontName = 'helvetica';
+xlabel('Age (Ma)','FontName','helvetica','FontSize',13,'FontWeight','bold')
+ylabel(['GMST (',char(176),'C)'],'FontName','helvetica','FontSize',13,...
     'FontWeight','bold')
 % (e) Plot Ice extent
 yyaxis right, ylim([-50,90]), ax.YTick = [40:10:90];
@@ -134,7 +133,7 @@ for ii = 1:size(icestage,1)
 end
 ax.YTickLabel = strsplit(num2str(ax.YTick),' ');
 ax.YColor = icecol(1:3);
-yl = ylabel(['Lat. ice extent (|',char(176),'|)'],'FontName','Arial','FontSize',13,...
+yl = ylabel(['Lat. ice extent (|',char(176),'|)'],'FontName','helvetica','FontSize',13,...
     'FontWeight','bold','Color',icecol(1:3),'HorizontalAlignment','center');
 yl.Position = [-13,65,-1];
 % (f) add percentiles legend
@@ -144,7 +143,9 @@ pause(1)
 leg.Position=[.5865,.95,.225,.03];
 leg.FontSize = 11;
 pause(1)
-xlabel(leg,'Percentile','FontName','Arial','FontSize',13,'FontWeight','bold')
+cmleg = [cm;0,0,0;flipud(cm)];
+colormap(cmleg)
+xlabel(leg,'Percentile','FontName','helvetica','FontSize',13,'FontWeight','bold')
 % (g) Save figure
 if savefig
     export_fig(gcf,[figdir,'/',figname],'-p0.01','-m5')

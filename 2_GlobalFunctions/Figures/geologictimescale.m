@@ -1,5 +1,6 @@
 function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
-                            colorselect,divisions,labels,sf,axnum)
+                            colorselect,divisions,labels,sf,axnum,fontname,...
+                            fontsize,reccolor,textcolor)
                         
                         
 %SCRIPT TO ADD GEOLOGIC TIME SCALE TO FIGURES
@@ -31,7 +32,15 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     %'on' (default)
     %'off' (useful if you're plotting stages)
 %sf: scale factor: scalar used to adjust the width of the time scale
-    %       (defaul: 7.5)
+    % scalar (default: 7.5)
+%axnum: number of axes 
+    %1 (default; ticks added to right y-axis)
+    %2 (no ticks added to right y-axis)
+%fontname
+    %'helvetica' (default)
+    %any other accepted matlab font
+%fontsize
+    %scalar (default: 11)
 
 %SYNTAX:
 %geologictimescale            <--- uses all defaults
@@ -41,7 +50,7 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     
 % (1) Load GTS file (CHANGE BASED ON FILENAME/LOCATION)
     load("GTS2020.mat")
-% (2) If nargin == 0 or 2, specify defaults
+% (2) Specify defaults basaed on nargin
     if nargin == 0
         xmin = GTS.UpperBoundary(1);
         xmax = GTS.LowerBoundary(end);
@@ -53,6 +62,10 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
         labels = 'on';
         sf = 7.5;
         axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
     elseif nargin == 2
         Yaxisopt = 'normal';
         Xaxisopt = 'normal';
@@ -62,6 +75,87 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
         labels = 'on';
         sf = 7.5;
         axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 3
+        Xaxisopt = 'normal';
+        axisselect = gca;
+        colorselect = 'standard';
+        divisions = 'periods';
+        labels = 'on';
+        sf = 7.5;
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 4
+        axisselect = gca;
+        colorselect = 'standard';
+        divisions = 'periods';
+        labels = 'on';
+        sf = 7.5;
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 5
+        colorselect = 'standard';
+        divisions = 'periods';
+        labels = 'on';
+        sf = 7.5;
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 6
+        divisions = 'periods';
+        labels = 'on';
+        sf = 7.5;
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 7
+        labels = 'on';
+        sf = 7.5;
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 8
+        sf = 7.5;
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 9
+        axnum = 1;
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 10
+        fontname = 'helvetica';
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 10
+        fontsize = 11;
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 11
+        reccolor = [0 0 0];
+        textcolor = [0 0 0];
+    elseif nargin == 12
+        textcolor = [0 0 0];
     end
 % (3) Define colors, times, and names of age divisions
     % (a) Eras:
@@ -149,14 +243,14 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     for ii = 1:length(Name.Eras)
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Eras(ii),ym(1),range(Time.Eras(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Eras(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Eras(ii,:));
         text(ax,Time.Eras(ii)+range(Time.Eras(ii:ii+1))/2,ym(1)+recheight/2,Name.Eras(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor)
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Eras(ii),yl(2)+range(yl)/(sf*2),range(Time.Eras(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Eras(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Eras(ii,:));
         text(ax,Time.Eras(ii)+range(Time.Eras(ii:ii+1))/2,ym(1)+recheight/2,Name.Eras(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
     end
     end    
     %(b) Add Period labels
@@ -164,19 +258,19 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Periods(ii),yl(1)-range(yl)/sf+range(yl)/(sf*2),...
             range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         if strcmpi(labels,'on')
             text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,yl(1)-range(yl)/sf+range(yl)/(sf*2)+recheight/2,...
             Name.Periods(ii),...
-            'HorizontalAlignment','center','VerticalAlignment','middle','FontName','Arial','color','k')
+            'HorizontalAlignment','center','VerticalAlignment','middle','FontName',fontname,'color',textcolor)
         end
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Periods(ii),yl(2),...
             range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         if strcmpi(labels,'on')
             text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,recheight+recheight/2,Name.Periods(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
         end
     end
     end 
@@ -187,14 +281,14 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     for ii = 1:length(Name.Periods)
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Periods(ii),ym(1),range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,ym(1)+recheight/2,Abbrev.Periods(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor)
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Periods(ii),yl(2)+range(yl)/(sf*2),range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,ym(1)+recheight/2,Abbrev.Periods(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
     end
     end    
     %(b) Add Epoch labels
@@ -202,19 +296,19 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Epochs(ii),yl(1)-range(yl)/sf+range(yl)/(sf*2),...
             range(Time.Epochs(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Epochs(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Epochs(ii,:));
         if strcmpi(labels,'on')
             text(ax,Time.Epochs(ii)+range(Time.Epochs(ii:ii+1))/2,yl(1)-range(yl)/sf+range(yl)/(sf*2)+recheight/2,...
             Name.Epochs(ii),...
-            'HorizontalAlignment','center','VerticalAlignment','middle','FontName','Arial','color','k')
+            'HorizontalAlignment','center','VerticalAlignment','middle','FontName',fontname,'color',textcolor)
         end
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Epochs(ii),yl(2),...
             range(Time.Epochs(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Epochs(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Epochs(ii,:));
         if strcmpi(labels,'on')
             text(ax,Time.Epochs(ii)+range(Time.Epochs(ii:ii+1))/2,recheight+recheight/2,Name.Epochs(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
         end
     end
     end
@@ -225,14 +319,14 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     for ii = 1:length(Name.Periods)
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Periods(ii),ym(1),range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,ym(1)+recheight/2,Abbrev.Periods(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor)
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Periods(ii),yl(2)+range(yl)/(sf*2),range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,ym(1)+recheight/2,Abbrev.Periods(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
     end
     end    
     %(b) Add Stage labels
@@ -240,20 +334,20 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Stages(ii),yl(1)-range(yl)/sf+range(yl)/(sf*2),...
             range(Time.Stages(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Stages(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Stages(ii,:));
         if strcmpi(labels,'on')
             lab = char(Name.Stages(ii));
             text(ax,Time.Stages(ii)+range(Time.Stages(ii:ii+1))/2,yl(1)-range(yl)/sf+range(yl)/(sf*2)+recheight/2,...
             lab(1:3),...
-            'HorizontalAlignment','center','VerticalAlignment','middle','FontName','Arial','color','k')
+            'HorizontalAlignment','center','VerticalAlignment','middle','FontName',fontname,'color',textcolor)
         end
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Stages(ii),yl(2),...
             range(Time.Stages(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Stages(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Stages(ii,:));
         if strcmpi(labels,'on')
             text(ax,Time.Stages(ii)+range(Time.Stages(ii:ii+1))/2,recheight+recheight/2,Name.Stages(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
         end
     end
     end 
@@ -264,28 +358,28 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     for ii = 1:length(Name.Eras)
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Eras(ii),ym(1),range(Time.Eras(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Eras(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Eras(ii,:));
         text(ax,Time.Eras(ii)+range(Time.Eras(ii:ii+1))/2,ym(1)+recheight/2,Name.Eras(ii),...
-            'HorizontalAlignment','center','VerticalAlignment','middle','FontName','Arial','color','k')
+            'HorizontalAlignment','center','VerticalAlignment','middle','FontName',fontname,'color',textcolor)
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Eras(ii),yl(2)+range(yl)/(sf*2),range(Time.Eras(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Eras(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Eras(ii,:));
         text(ax,Time.Eras(ii)+range(Time.Eras(ii:ii+1))/2,ym(1)+recheight/2,Name.Eras(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
     end
     end    
     %(b) Add Period lables
     for ii = 1:length(Name.Periods)
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Periods(ii),ym(1)+recheight,range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,ym(1)+recheight+recheight/2,Abbrev.Periods(ii),...
-            'HorizontalAlignment','center','VerticalAlignment','middle','FontName','Arial','color','k')
+            'HorizontalAlignment','center','VerticalAlignment','middle','FontName',fontname,'color',textcolor)
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Periods(ii),yl(2)+range(yl)/(sf*2),range(Time.Periods(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Periods(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Periods(ii,:));
         text(ax,Time.Periods(ii)+range(Time.Periods(ii:ii+1))/2,ym(1)+recheight/2,Abbrev.Periods(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
     end
     end    
     %(b) Add Stage labels
@@ -293,35 +387,42 @@ function geologictimescale(xmin,xmax,Yaxisopt,Xaxisopt,axisselect,...
     if strcmpi(Yaxisopt,'normal')
         rectangle(ax,'Position',[Time.Stages(ii),ym(1)+2*recheight,...
             range(Time.Stages(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Stages(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Stages(ii,:));
         if strcmpi(labels,'on')
             lab = char(Name.Stages(ii));
             text(ax,Time.Stages(ii)+range(Time.Stages(ii:ii+1))/2,yl(1)-range(yl)/sf+range(yl)/(sf*2)+recheight/2,...
             lab(1:3),...
-            'HorizontalAlignment','center','VerticalAlignment','middle','FontName','Arial','color','k')
+            'HorizontalAlignment','center','VerticalAlignment','middle','FontName',fontname,'color',textcolor)
         end
     elseif strcmpi(Yaxisopt,'reverse')
         rectangle(ax,'Position',[Time.Stages(ii),yl(2),...
             range(Time.Stages(ii:ii+1)),recheight],...
-            'EdgeColor','k','FaceColor',Color.Stages(ii,:));
+            'EdgeColor',reccolor,'FaceColor',Color.Stages(ii,:));
         if strcmpi(labels,'on')
             text(ax,Time.Stages(ii)+range(Time.Stages(ii:ii+1))/2,recheight+recheight/2,Name.Stages(ii),...
-            'HorizontalAlignment','center','FontName','Arial','color','k','VerticalAlignment','middle')
+            'HorizontalAlignment','center','FontName',fontname,'color',textcolor,'VerticalAlignment','middle')
         end
     end
     end   
     end
     
-    
+    set(findall(gca,'-property','FontSize'),'FontSize',fontsize)
 
 %(7) Make cosmetic adjustments (box around plot, custom tick marks)
     box off
     colororder({'k','k'})
     yl=ax.YLim;xl=ax.XLim;
-    rectangle(ax,'Position',[xl(1),yl(1),range(xl),range(yl)],'EdgeColor','k','LineWidth',1);
+    rectangle(ax,'Position',[xl(1),yl(1),range(xl),range(yl)],'EdgeColor',reccolor,'LineWidth',1);
     ax.XAxis.TickDirection='out';ax.XAxis.MinorTick='on';
     if axnum == 1
-        yt = ax.YTick;yyaxis(ax,'right');ax.YLim=yl;ax.YTick=yt;ax.YColor = 'k';
+        yt = ax.YTick;
+        ytm = ax.YAxis.MinorTickValues;
+        yyaxis(ax,'right');
+        ax.YLim=yl;
+        ax.YTick=yt;
+        ax.YAxis(2).MinorTickValues=ytm;
+        ax.YAxis(2).MinorTick=ax.YAxis(1).MinorTick;
+        ax.YColor = 'k';
         ax.YTickLabel=[];yyaxis left
     end
 end

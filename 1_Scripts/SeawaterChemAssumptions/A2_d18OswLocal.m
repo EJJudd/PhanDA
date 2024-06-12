@@ -24,7 +24,7 @@
 
 % PART 1: DEFINE DIRECTORIES & READ IN DATA
 % Directories
-datadir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/5_NonGlobalFiles/SeawaterChemAssumptions';
+datadir = '/Users/emilyjudd/Documents/PhanDA/4_NonGlobalFiles/SeawaterChemAssumptions';
 savedir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/4_GlobalFiles/PSMs/seawaterchem';
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures/Supplemental';
 % Load modern climate vars
@@ -129,9 +129,49 @@ save([datadir,'/CarboniferousGroundtruth.mat'],'d18O_predict_carb')
 load([datadir,'/CarbCESM.mat'])
 fprintf('\n%.0f%% of predictions are within %s0.25 of the observed value\n',...
     sum(abs(d18O_predict_carb-d18O_CESM_regridded)<0.25,'all')/...
-    sum(~isnan(d18O_CESM_regridded),'all')*100, char(177))
+    sum(~isnan(d18O_CESM_regridded+d18O_predict_carb),'all')*100, char(177))
+fprintf('\n%.0f%% of predictions are within %s0.5 of the observed value\n',...
+    sum(abs(d18O_predict_carb-d18O_CESM_regridded)<0.5,'all')/...
+    sum(~isnan(d18O_CESM_regridded+d18O_predict_carb),'all')*100, char(177))
 fprintf('\nThe latitudinally weighted global mean offset is %.02f\n',...
     latweightgmst(abs(d18O_predict_carb-d18O_CESM_regridded)))
+
+% PART 5: GROUNDTRUTH IN EOCENE
+clearvars -except *dir
+printprogress = true;
+AssumptionFiles.predictsw = load("SeawaterMdl.mat");
+load([datadir,'/EoceneClimateVars.mat'])
+nonanidx = find(~isnan(sss_anomaly));
+x.lat = Lat(nonanidx);
+x.sst_anomaly = sst_anomaly(nonanidx);
+x.dist = dist(nonanidx);
+x.sss_anomaly = sss_anomaly(nonanidx);
+x.precipln_anomaly = precipln_anomaly(nonanidx);
+% Run model and save output
+d18O_predict = predictd18Osw(x, AssumptionFiles, printprogress);
+d18O_predict_eocene = NaN(size(Lat));
+d18O_predict_eocene(nonanidx) = d18O_predict;
+% Subtract 1 (to account for ice-free conditions)
+d18O_predict_eocene = d18O_predict_eocene - 1;
+save([datadir,'/EoceneGroundtruth.mat'],'d18O_predict_eocene')
+load([datadir,'/EoceneCESM.mat'])
+fprintf('\n%.0f%% of predictions are within %s0.25 of the observed value\n',...
+    sum(abs(d18O_predict_eocene-d18O_CESM_regridded)<0.25,'all')/...
+    sum(~isnan(d18O_CESM_regridded+d18O_predict_eocene),'all')*100, char(177))
+fprintf('\n%.0f%% of predictions are within %s0.5 of the observed value\n',...
+    sum(abs(d18O_predict_eocene-d18O_CESM_regridded)<0.5,'all')/...
+    sum(~isnan(d18O_CESM_regridded+d18O_predict_eocene),'all')*100, char(177))
+fprintf('\n%.0f%% of sub-arctic predictions are within %s0.25 of the observed value\n',...
+    sum(abs(d18O_predict_eocene(Lat(:,1)<66.5,:)-d18O_CESM_regridded(Lat(:,1)<66.5,:))<0.25,'all')/...
+    sum(~isnan(d18O_CESM_regridded(Lat(:,1)<66.5,:)+d18O_predict_eocene(Lat(:,1)<66.5,:)),'all')*100, char(177))
+fprintf('\n%.0f%% of sub-arctic predictions are within %s0.5 of the observed value\n',...
+    sum(abs(d18O_predict_eocene(Lat(:,1)<66.5,:)-d18O_CESM_regridded(Lat(:,1)<66.5,:))<0.5,'all')/...
+    sum(~isnan(d18O_CESM_regridded(Lat(:,1)<66.5,:)+d18O_predict_eocene(Lat(:,1)<66.5,:)),'all')*100, char(177))
+fprintf('\nThe latitudinally weighted global mean offset is %.02f\n',...
+    latweightgmst(abs(d18O_predict_eocene-d18O_CESM_regridded)))
+
+
+
 
 %% SECOND HALF: FIGURE
 clearvars -except *dir
@@ -139,12 +179,12 @@ load([datadir,'/ModernClimateVars.mat'])
 load([datadir,'/ModernGroundtruth.mat'])
 load("HadCM3Coordinates.mat")
 [Lon,Lat] = meshgrid(Lon,Lat);
-fig = figure('Position',[750 1 590 820],'Color','w');
-tiledlayout(3,26,'Padding','none','TileSpacing','none');
+fig = figure('Position',[-1248,491,620,290],'Color','w');
+tiledlayout(1,2,'Padding','none','TileSpacing','none');
 cm = hex2rgb({'#018571','#2A9887','#52AA9D','#7BBDB3','#A4D0C9','#CCE2DF','#f5f5f5',...
     '#E8DCD1','#DBC4AC','#CEAB88','#C09263','#B37A3E','#A6611A'},1);
 % PANEL 1: Observed salinity vs observed d18Osw
-nexttile([1,13]); hold on, box on
+nexttile; hold on, box on
 load([datadir,'/ModernSalinityAnomaly.mat'])
 scatter(sssa_obs(:),d18w_obs(:),75,'filled','MarkerFaceColor',[.5 .5 .5],...
     'MarkerEdgeColor','k','MarkerFaceAlpha',.25,'MarkerEdgeAlpha',.1)
@@ -155,7 +195,7 @@ text(-33.5,1,sprintf('r = %.02f',r),'FontName','Arial','FontSize',13,'FontWeight
 xlabel('Observed SSS anomaly (PSU)','FontName','Arial','FontSize',13,'FontWeight','bold')
 ylabel(['\fontsize{13}Observed δ^{18}O','\fontsize{7}sw', '\fontsize{13}  (‰)'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
 % PANEL 2: HacCM3 salinity vs observed d18Osw
-nexttile([1,13]); hold on, box on
+nexttile; hold on, box on
 scatter(sss_anomaly(:),d18w_obs(:),75,'filled','MarkerFaceColor',[.5 .5 .5],...
     'MarkerEdgeColor','k','MarkerFaceAlpha',.25,'MarkerEdgeAlpha',.1)
 r = corr(sss_anomaly(~isnan(sss_anomaly)),d18w_obs(~isnan(d18w_obs)));
@@ -164,7 +204,11 @@ text(-33.5,1.5,'B','FontName','Arial','FontSize',15,'FontWeight','bold')
 text(-33.5,1,sprintf('r = %.02f',r),'FontName','Arial','FontSize',13,'FontWeight','bold')
 xlabel('HadCM3L SSS anomaly (PSU)','FontName','Arial','FontSize',13,'FontWeight','bold')
 ylabel(['\fontsize{13}Observed δ^{18}O','\fontsize{7}sw', '\fontsize{13}  (‰)'],'FontName','Arial','FontWeight','bold','Interpreter','tex')
+export_fig(gcf,[figdir,'/SupFig_SSScomp.png'],'-p0.01','-m5')
+
 % PANEL 3: Predicted - observed map
+fig = figure('Position',[750 1 580 820],'Color','w');
+tiledlayout(3,26,'Padding','none','TileSpacing','none');
 nexttile([1,16]); 
 ax = worldmap('World');mlabel off, plabel off, gridm off
 pcolorm(Lat,Lon,d18O_predict_mod-d18w_obs)
@@ -183,7 +227,7 @@ histogram(d18O_predict_mod-d18w_obs,'BinWidth',.25,'FaceColor',[.5 .5 .5]);
 ylabel('Frequency (N)','FontName','Arial','FontSize',13,'FontWeight','bold')
 xlabel({'\fontsize{13}Predicted - observed', ['\fontsize{13}δ^{18}O','\fontsize{7}sw','\fontsize{13}  (‰)']},'FontName','Arial','FontSize',13,'FontWeight','bold')
 set(gca,'YTick',[0:250:1750])
-text(-3.75,1720,'D','FontName','Arial','FontSize',15,'FontWeight','bold')
+text(-3.75,1720,'B','FontName','Arial','FontSize',15,'FontWeight','bold')
 % PANEL 5: Predicted - CESM map
 load([datadir,'/CarboniferousGroundtruth.mat'])
 load([datadir,'/CarbCESM.mat'])
@@ -206,9 +250,36 @@ nexttile([1,10]), hold on, box on
 histogram(d18O_predict_carb-d18O_CESM_regridded,'BinWidth',.25,'FaceColor',[.5 .5 .5]);
 ylabel('Frequency (N)','FontName','Arial','FontSize',13,'FontWeight','bold')
 xlabel({'\fontsize{13}Predicted - iCESM', ['\fontsize{13}δ^{18}O','\fontsize{7}sw','\fontsize{13}  (‰)']},'FontName','Arial','FontSize',13,'FontWeight','bold')
-text(-3.95,1910,'F','FontName','Arial','FontSize',15,'FontWeight','bold')
-annotation('textbox', [.05 .625 .01 .01], 'String', 'C', 'FontName','Arial','FontSize',15,'FontWeight','bold','EdgeColor','none')
-annotation('textbox', [.05 .285 .01 .01], 'String', 'E', 'FontName','Arial','FontSize',15,'FontWeight','bold','EdgeColor','none')
+text(-3.95,1910,'D','FontName','Arial','FontSize',15,'FontWeight','bold')
+
+% PANEL 7: Predicted - CESM map
+load([datadir,'/EoceneGroundtruth.mat'])
+load([datadir,'/EoceneCESM.mat'])
+load([datadir,'/EoceneClimateVars.mat'])
+lsmask = sst_anomaly+d18O_CESM_regridded;lsmask(~isnan(lsmask)) = 0;lsmask(isnan(lsmask)) = 1;
+nexttile([1,16]); 
+ax = worldmap('World');mlabel off, plabel off, gridm off
+pcolorm(Lat,Lon,d18O_predict_eocene-d18O_CESM_regridded)
+caxis([-3.25 3.25])
+c.Ticks = [-3:1:3];
+colormap(cm)
+shading interp, framem k
+contourm(Lat,Lon,lsmask,0,'k-','linewidth',1)
+c = colorbar('south');
+c.AxisLocation = 'out';
+c.FontSize = 11;
+xlabel(c,['\fontsize{13}Predicted - iCESM δ^{18}O','\fontsize{7}sw', '\fontsize{13}  (‰)'],'FontName','Arial','FontSize',13,'FontWeight','bold')
+% PANEL 8: Residuals
+nexttile([1,10]), hold on, box on
+histogram(d18O_predict_eocene-d18O_CESM_regridded,'BinWidth',.25,'FaceColor',[.5 .5 .5]);
+ylabel('Frequency (N)','FontName','Arial','FontSize',13,'FontWeight','bold')
+xlabel({'\fontsize{13}Predicted - iCESM', ['\fontsize{13}δ^{18}O','\fontsize{7}sw','\fontsize{13}  (‰)']},'FontName','Arial','FontSize',13,'FontWeight','bold')
+text(-1.8,1150,'F','FontName','Arial','FontSize',15,'FontWeight','bold')
+
+
+annotation('textbox', [.05 .975 .01 .01], 'String', 'A', 'FontName','Arial','FontSize',15,'FontWeight','bold','EdgeColor','none')
+annotation('textbox', [.05 .64 .01 .01], 'String', 'C', 'FontName','Arial','FontSize',15,'FontWeight','bold','EdgeColor','none')
+annotation('textbox', [.05 .3 .01 .01], 'String', 'E', 'FontName','Arial','FontSize',15,'FontWeight','bold','EdgeColor','none')
 
 
 export_fig(fig,[figdir,'/SupFig_d18Local.png'],'-p0.01','-m5')

@@ -2,6 +2,13 @@ function Data = addpetm(Data, Preferences)
 
 load("PETM.mat","PETM")
 
+if Preferences.PETM == "deepMIP"
+    PETM.StartDeepMIP(isnan(PETM.StartDeepMIP)) = ...
+        PETM.Start(isnan(PETM.StartDeepMIP));
+    PETM.EndDeepMIP(isnan(PETM.EndDeepMIP)) = ...
+        PETM.EndPeak(isnan(PETM.EndDeepMIP));
+end
+
 for ii = 1:height(PETM)
     if Preferences.PETM == "peak"
         depth(1) = PETM.Start(ii);

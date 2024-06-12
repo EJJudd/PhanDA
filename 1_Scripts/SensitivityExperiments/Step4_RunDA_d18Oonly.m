@@ -19,7 +19,7 @@
 % data and model priors -- on iCloud, and save the assimilation outputs on
 % OneDrive)
 iCloud = '/Users/emilyjudd/Library/Mobile Documents/com~apple~CloudDocs';
-OutputDrive = '/Users/emilyjudd/Documents/PhanDA/5_Outputs/';
+OneDrive = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC';
 
 % Ensemble Directory: (stored on iCloud)
 EnsDir = [iCloud,'/ModelOutputs/AssimilationFiles_beta'];
@@ -28,13 +28,13 @@ Ens = ensemble(enfilename);
 EnsMeta = Ens.metadata;
 
 % Assimilaion Directory: (soted on OneDrive)
-ad = '21May2024';
-AssDir = [OutputDrive,'/AssimilationOutputs/PhanerozoicDA_',ad];
+ad = '27Jul2023';
+AssDir = [OneDrive,'/AssimilationOutputs/PhanerozoicDA_',ad];
 InputDir = [AssDir,'/InputWorkspaces'];
 OutputDir = [AssDir,'/OutputWorkspaces'];
-% FigDir = [AssDir,'/OutputFigs'];
-% mkdir([FigDir,'/EnsSummary'])
-% mkdir([FigDir,'/StageSummary'])
+FigDir = [AssDir,'/OutputFigs'];
+mkdir([FigDir,'/EnsSummary'])
+mkdir([FigDir,'/StageSummary'])
 
 % YYe data:
 load([InputDir,'/YYe.mat'])
@@ -61,17 +61,13 @@ Rvals.d18cforam = [1e-3,1e-2,1e-1];
 Rvals.d18acmacro = [5e-2,.275,5e-1];
 Rvals.d18p = [5e-2,.275,5e-1; ...
               .1,.5,.9];
-Rvals.tex = [1e-4,1e-3,1e-2];
-Rvals.uk = [2.5e-5,2.5e-4,2.5e-3];
-Rvals.mg = [5e-3,5e-2,5e-1; ...
-                .1 .5 .9];
 
 % (c) Define assimilation options
 % Define Rmethods
 Ropts = ["low","medium","high"];
 % Ropts = "percentile";
-% Deine seawater d18O correction
-SWopts = ["snowball","veizer","off"];
+% Deine Snowball correction
+SBopts = [true,false];
 % SBopts = true;
 % Define pH correction
 pHopts = ["ens","rec","off"];
@@ -90,14 +86,14 @@ allvar = EnsMeta.variables;
 noassvar = setdiff(allvar,assvar);
 
 % (e) Preallocate
-Ndata = NaN(DArange(end), numel(Ropts)*numel(SWopts)*numel(pHopts));
-Nandata = NaN(DArange(end), numel(Ropts)*numel(SWopts)*numel(pHopts));
-GMST = cell(DArange(end), numel(Ropts)*numel(SWopts)*numel(pHopts));
-LTG = cell(DArange(end), numel(Ropts)*numel(SWopts)*numel(pHopts));
-LTGsst = cell(DArange(end), numel(Ropts)*numel(SWopts)*numel(pHopts));
-TASpost = cell(DArange(end), numel(Ropts)*numel(SWopts)*numel(pHopts));
+Ndata = NaN(DArange(end), numel(Ropts)*numel(SBopts)*numel(pHopts));
+Nandata = NaN(DArange(end), numel(Ropts)*numel(SBopts)*numel(pHopts));
+GMST = cell(DArange(end), numel(Ropts)*numel(SBopts)*numel(pHopts));
+LTG = cell(DArange(end), numel(Ropts)*numel(SBopts)*numel(pHopts));
+LTGsst = cell(DArange(end), numel(Ropts)*numel(SBopts)*numel(pHopts));
+TASpost = cell(DArange(end), numel(Ropts)*numel(SBopts)*numel(pHopts));
 TASprior = cell(DArange(end), 1);
-ItName = string(zeros(numel(Ropts)*numel(SWopts)*numel(pHopts),1));
+ItName = string(zeros(numel(Ropts)*numel(SBopts)*numel(pHopts),1));
 
 c = 1;
 % Assimilate through stages
@@ -121,23 +117,29 @@ for a = DArange
     % pH Correction
     for pH = 1:numel(pHopts)
         pHcorr = pHopts(pH);
-    % seawater d18O correction
-    for SW = 1:numel(SWopts)
-        seawatercorr = SWopts(SW);      
+    % Snowball correction
+    for SB = 1:numel(SBopts)
+        snowballcorr = SBopts(SB);      
     % Rmethod
     for Rmeth = 1:numel(Ropts)
         Rmethod = Ropts(Rmeth);
     
-    ItName(c) = sprintf("phCorr = %s\nSeawaterCorr = %s\nRmethod = %s", ...
-                     pHcorr, seawatercorr, Rmethod);
+    ItName(c) = sprintf("phCorr = %s\nSnowballCorr = %s\nRmethod = %s\n", ...
+                     pHcorr, string(snowballcorr), Rmethod);
 
-    % (c) Assemble the Y, Ye, & R values
+    % (c.1) Remove non-d18O data
+    proxies = string(fieldnames(Y.(stagelab{a})));
+    rm = setdiff(proxies,["d18a","d18cforam","d18cmacro","d18p"]);
+    UPD.(stagelab{a}) = rmfield(UPD.(stagelab{a}),rm);
+    Y.(stagelab{a}) = rmfield(Y.(stagelab{a}),rm);
+    Ye.(stagelab{a}) = rmfield(Ye.(stagelab{a}),rm);
+    % (c.2) Assemble the Y, Ye, & R values
     [Yuse, Yeuse, Ruse, proxytype, paleolat, paleolon] = assembleYYeR( UPD.(stagelab{a}), ...
         Y.(stagelab{a}), Ye.(stagelab{a}), Rvals, Assumptions.(stagelab{a}), ...
-        pHcorr, seawatercorr, Rmethod, a);
+        pHcorr, snowballcorr, Rmethod, a);
     Ndata(a,c) = numel(Yuse);
 
-    % (c.2) Remove NaNs, but document how many
+    % (c.3) Remove NaNs, but document how many
     %       (Remove later, but use for now)
     nanidx = any(isnan(Yeuse),2);
     Yuse(nanidx) = [];
@@ -164,7 +166,7 @@ for a = DArange
             c = c+1;
         end
     end
-        if SW ~= numel(SWopts)
+        if SB ~= numel(SBopts)
             c = c+1;
         end
     end
@@ -178,6 +180,6 @@ for a = DArange
     printprogress(message, true)
 
 end
-save(sprintf('%s/Output.mat', OutputDir), 'GMST', 'LTG',...
+save(sprintf('%s/Output_d18Oonly.mat', OutputDir), 'GMST', 'LTG',...
     'LTGsst','Index',"Ndata","Nandata","ItName","TASprior","TASpost","Rvals")
     

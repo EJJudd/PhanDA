@@ -30,6 +30,7 @@
 % OneDrive)
 iCloud = '/Users/emilyjudd/Library/Mobile Documents/com~apple~CloudDocs';
 OneDrive = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC';
+OutputDrive = '/Users/emilyjudd/Documents/PhanDA/5_Outputs';
 
 % Model Prior Ensemble:
 % Ensemble Directory (stored on iCloud)
@@ -47,7 +48,7 @@ datafilename = [DataDir,'/PhanSST_v001_06Jun2023.csv'];
 % (where input, output, and figure files are saved)
 % I name these directories by date for easy archiving
 ad = strrep(date,'-','');
-AssDir = [OneDrive,'/AssimilationOutputs/PhanerozoicDA_',ad];
+AssDir = [OutputDrive,'/AssimilationOutputs/PhanerozoicDA_',ad];
 mkdir(AssDir)
 % Define and create the assimilation directory subfolders
 InputDir = [AssDir,'/InputWorkspaces'];
@@ -90,7 +91,7 @@ Preferences.layer = "surfaceonly";
 Preferences.environment = ["estuarine","freshwater","tidal flat","lagoon","restricted"];
 Preferences.combstages = [22,45,51,56,75,83;...
                           23,46,52,57,76,84];
-                      Preferences.PETM = "body";
+Preferences.PETM = "body";
 Preferences.d18a.eq = "Grossman1986"; Preferences.d18a.min = "aragonite";
 Preferences.d18p.eq = "Lecuyer2013"; Preferences.d18p.min = "phosphate";
 Preferences.d18c.eq.nobel = "Kim1997"; Preferences.d18c.min = "calcite";
@@ -101,7 +102,7 @@ Preferences.d18c.eq.bel = "Daeron2019";
     % the belemnite correction to 0; otherwise, it is recommeneded to use a
     % correction of 1.5;
 Corrections.globalsw = "theory";
-Corrections.snowballearth = true;
+Corrections.swcorrection = true;
 Corrections.phcorrection = true;
 Corrections.NBS120c = 21.7;
 Corrections.Durango = 9.8;

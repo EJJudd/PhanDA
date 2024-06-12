@@ -84,7 +84,7 @@ ylim([8 41])
 xlim(log2([180 4500]))
 text(log2(195),39.25,'A','FontName','Arial','FontSize',15,'FontWeight','bold','color','k')
 text(log2(195),37,'Cenozoic','FontName','Arial','FontSize',13,'FontWeight','bold','color',cm(2,:))
-text(log2(195),35.5,['ACS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
+text(log2(195),35.5,['AESS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color',cm(2,:))
 text(log2(195),34.25,['      r = ',sprintf('%.02f',corr(X(cenozoic),Y(cenozoic)))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color',cm(2,:))
@@ -116,12 +116,12 @@ r = 0;
 x = min(X(paleonocopse)-sx/2):.1:max(X(paleonocopse)+sx/2);
 y = m.*x + b;
 plot(x,y,'k--','LineWidth',2)
-fprintf('Paleozoic ACS = %.1f %s %.1f \n', m, char(177), sm)
+fprintf('Paleozoic AESS = %.1f %s %.1f \n', m, char(177), sm)
 ylim([8 41])
 xlim(log2([180 4500]))
 text(log2(195),39.25,'B','FontName','Arial','FontSize',15,'FontWeight','bold','color','k')
 text(log2(195),37,'Paleozoic','FontName','Arial','FontSize',13,'FontWeight','bold','color',cm(4,:))
-text(log2(195),35.5,['ACS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
+text(log2(195),35.5,['AESS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color',cm(4,:))
 text(log2(195),34.25,['      r = ',sprintf('%.02f',corr(X(paleonocopse),Y(paleonocopse)))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color',cm(4,:))
@@ -159,7 +159,7 @@ ylim([8 41])
 xlim(log2([180 4500]))
 text(log2(195),39.25,'C','FontName','Arial','FontSize',15,'FontWeight','bold','color','k')
 text(log2(195),37,'Cenozoic & Paleozoic','FontName','Arial','FontSize',13,'FontWeight','bold','color','k')
-text(log2(195),35.5,['ACS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
+text(log2(195),35.5,['AESS = ',sprintf('%0.1f',m),'\pm',sprintf('%0.1f%sC',sm,char(176))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color','k')
 text(log2(195),34.25,['      r = ',sprintf('%.02f',corr(X(allnocopsemeso),Y(allnocopsemeso)))],...
     'FontName','Arial','FontSize',11,'FontWeight','bold','color','k')

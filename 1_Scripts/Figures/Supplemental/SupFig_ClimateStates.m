@@ -72,6 +72,8 @@ hold on, box on
 fn = fieldnames(CSpoidx);
 X = NaN(numel(GMST),3);
 Y = NaN(numel(GMST),3);
+Yt = NaN(numel(GMST),3);
+Yp = NaN(numel(GMST),3);
 meandim = 1;
 for ii = 1:numel(GMST)
     yt = LTG{ii}; yt(~tropics,:) = NaN;
@@ -79,6 +81,8 @@ for ii = 1:numel(GMST)
     X(ii,:) = prctile(GMST{ii},[16,50,84]);
     Y(ii,:) = prctile(latweightgmst(yt,meandim)-latweightgmst(yp,meandim),...
         [16,50,84]);
+    Yt(ii,:) = prctile(latweightgmst(yt,meandim),[16,50,84]);
+    Yp(ii,:) = prctile(latweightgmst(yp,meandim),[16,50,84]);
 end
 %Y = GMSTgrad(:,2:4);
 errorbar(X(:,2),Y(:,2),Y(:,2)-Y(:,1),Y(:,3)-Y(:,2),X(:,2)-X(:,1),X(:,3)-X(:,2),...
@@ -89,7 +93,7 @@ end
 ax1.FontName = 'Arial';ax1.FontSize = 11;
 xlim([7 42]),ylim([9 53])
 xlabel(['GMST (',char(176),'C)'],'FontName','Arial','FontSize',13,'FontWeight','bold')
-ylabel(['Latitudinal temperature gradient (',char(176),'C)'],'FontName','Arial','FontSize',13,'FontWeight','bold')
+ylabel(['\DeltaT_{lat} (',char(176),'C)'],'FontName','Arial','FontSize',13,'FontWeight','bold')
 cc = corr(X(:,2),Y(:,2));
 text(34,50,sprintf('r = %.2f',cc),'FontName','Arial','FontSize',13,'FontWeight','bold','VerticalAlignment','middle')
 text(7.75,51,'A','FontName','Arial','FontSize',15,'FontWeight','bold','VerticalAlignment','middle')

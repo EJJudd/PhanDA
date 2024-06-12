@@ -18,10 +18,12 @@ function [Y, Ye, Assumptions] = estimateYYe(proxydata, ens, ensmeta, ...
      % (a) Load seawater curves 
      Assumptions.global.pHens = pHLookup.pHGlobal(stageno,:);
      Assumptions.global.pHrec = median(PhanerozoicpH(stageno,:));
-    % (b) Estimate Global d18Osw
-    Assumptions.global.d18Osw.raw = AssumptionFiles.Globald18O(stageno);
-    % (c) Estimate snowball earth correction
-    Assumptions.global.d18Osw.Snowball = AssumptionFiles.Snowball(stageno);
+     % (b) Estimate Global d18Osw
+     Assumptions.global.d18Osw.raw = AssumptionFiles.Globald18O(stageno);
+     % (c) Estimate snowball earth correction
+     Assumptions.global.d18Osw.Snowball = AssumptionFiles.Snowball(stageno);
+     % (d) Estimate Veizer correction
+     Assumptions.global.d18Osw.Veizer = AssumptionFiles.Veizer(stageno);
 
 % (2) Loop through proxies and assemble Y, Ye values
 for ii = 1:numel(fn)

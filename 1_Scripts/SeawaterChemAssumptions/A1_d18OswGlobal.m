@@ -17,8 +17,8 @@
 % and the second half (PANEL 1-6) produces the supplemental figure.
 
 % DEFINE DIRECTORIES & READ IN DATA
-datadir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/5_NonGlobalFiles/SeawaterChemAssumptions';
-savedir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Code/DataAssimilation/4_GlobalFiles/PSMs/seawaterchem';
+datadir = '/Users/emilyjudd/Documents/PhanDA/4_NonGlobalFiles/SeawaterChemAssumptions';
+savedir = '/Users/emilyjudd/Documents/PhanDA/3_GlobalFiles/PSMs/seawaterchem';
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures/Supplemental';
 % Benthic foram data
 d18b = readtable( [datadir,'/d18Obenthic_Westerhold.csv'] );
@@ -121,10 +121,13 @@ PhanGlobalSW.Snowball = interp1(Snowball.age,Snowball.d18o,PhanGlobalSW.Age);
 adj = mean(PhanGlobalSW.Snowball(1,:));
 PhanGlobalSW.Snowball = PhanGlobalSW.Snowball-adj;
 
-save([savedir,'/Phanerozoicd18Ov5.mat'],"PhanGlobalSW")
+% PART 5: ADD IN THE VEIZER AND PROKOPH (2015) CORRECTION
+PhanGlobalSW.Veizer = -3e-5 * GTS.Average.^2 + 4.6e-3 * GTS.Average;
+
+save([savedir,'/Phanerozoicd18Ov6.mat'],"PhanGlobalSW")
 
 %% SECOND HALF: Plot figure
-fig = figure('Position',[750 1 645 820],'Color','w');
+fig = figure('Position',[750 1 645 720],'Color','w');
 tiledlayout(4,6,'Padding','none','TileSpacing','none');
 % PANEL 1: Timeseries of scaled benthic stack
 nexttile([1,4]), hold on
@@ -149,7 +152,7 @@ text(36.5,1.025,'A','Color','k','FontWeight',...
     'bold','FontSize',15,'FontName','Arial','HorizontalAlignment','center')
 plot(CenoTime,CenoSw,'k-')
 geologictimescale(0,GTS.LowerBoundary(GTS.Stage=="Priabonian"),...
-    'normal','reverse',gca,'standard','stages','off',8,1)
+    'normal','reverse',gca,'standard','stages','off',5,1)
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
 ylabel(['\fontsize{13}δ^{18}O','\fontsize{7}sw', '\fontsize{13}  (‰)'],'FontName','Arial','FontSize',12,'FontWeight','bold')
 % PANEL 2: Histogram of phases
@@ -177,7 +180,7 @@ plot(PhanTime,median(PhanSwMy,2),'k-','LineWidth',2)
 ylim([-1.1 1.1])
 geologictimescale(GTS.UpperBoundary(GTS.Stage == "Rhuddanian"),...
     GTS.LowerBoundary(GTS.Stage=="Katian"),'normal','reverse',gca,...
-    'standard','stages','off',8,1)
+    'standard','stages','off',5,1)
 text(452.3,.915,'C','Color','k','FontWeight',...
     'bold','FontSize',15,'FontName','Arial','HorizontalAlignment','center')
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
@@ -197,7 +200,7 @@ plot(PhanTime,median(PhanSwMy,2),'k-','LineWidth',2)
 ylim([-1.1 1.1])
 geologictimescale(GTS.UpperBoundary(GTS.Stage == "Kungurian"),...
     GTS.LowerBoundary(GTS.Stage=="Famennian"),'normal','reverse',gca,...
-    'standard','stages','off',8,1)
+    'standard','stages','off',5,1)
 text(367.5,.915,'D','Color','k','FontWeight',...
     'bold','FontSize',15,'FontName','Arial','HorizontalAlignment','center')
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
@@ -213,7 +216,7 @@ fill([PhanGlobalSW.Age;flipud(PhanGlobalSW.Age)],...
 plot(PhanGlobalSW.Age,median(PhanGlobalSW.GlobalSW,2),'color','k','LineWidth',2)
 ylim([-1.1 1.1])
 geologictimescale(0,GTS.LowerBoundary(91),'normal','reverse',gca,...
-    'standard','stages','off',8,1)
+    'standard','stages','off',5,1)
 text(478,.945,'E','Color','k','FontWeight',...
     'bold','FontSize',15,'FontName','Arial','HorizontalAlignment','center')
 ylabel(['\fontsize{13}δ^{18}O','\fontsize{7}sw', '\fontsize{13}  (‰)'],'FontName','Arial','FontSize',13,'FontWeight','bold')
@@ -228,7 +231,7 @@ fill([PhanGlobalSW.Age;flipud(PhanGlobalSW.Age)],...
 plot(PhanGlobalSW.Age,median(PhanGlobalSW.GlobalSW,2)+mean(PhanGlobalSW.Snowball,2),'color','k','LineWidth',2)
 ylim([-2.45 1.1])
 geologictimescale(0,GTS.LowerBoundary(91),'normal','reverse',gca,...
-    'standard','stages','off',8,1)
+    'standard','stages','off',5,1)
 text(478,.825,'F','Color','k','FontWeight',...
     'bold','FontSize',15,'FontName','Arial','HorizontalAlignment','center')
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')

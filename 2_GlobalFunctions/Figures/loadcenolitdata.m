@@ -130,14 +130,14 @@ Stage{5,1}(2,1) = "Thanetian";
 Age{5,1}{2,1} = [56,57];
 Temp{5,1}{2,1} = [27.5,28.5,30.1];
 
-% Hansen et al., 2013
-% https://doi.org/10.1098/rsta.2012.0294
+% Osman et al., 2021
+% https://doi.org/10.1038/s41586-021-03984-4
 % Reporting 95% CI
-Ref{6,1} = "Hansen et al., 2013";
+Ref{6,1} = "Osman et al., 2021";
 %Holocene
 Stage{6,1}(1,1) = "Holocene";
 Age{6,1}{1,1} = [0,0.0117];
-Temp{6,1}{1,1} = [14.15,14.15,14.15];
+Temp{6,1}{1,1} = [11.3,13.2,13.7];
 
 % Ring et al., 2022
 % https://doi.org/10.1029/2021PA004364
@@ -192,17 +192,18 @@ Temp{7,1}{8,1} = 14.4 + [min(GMST_Ring.EarlyEocene(idx)),...
 Ref{8,1} = "Eichenseer & Jones, 2023";
 %EECO
 Stage{8,1}(1,1) = "Ypresian";
-Age{8,1}{1,1} = []; 
+Age{8,1}{1,1} = [49.1,53.8]; 
 Temp{8,1}{1,1} = [26.7,28.7,30.7];
 
 
 % PART 2: EXTRACT MATHCING PHANDA VALUE
+if ~isempty(GMST) && iscell(GMST)
 PhanDA = [];
 Lit = [];
 Ridx = strings(0,0);
 for ii = 1:numel(Ref)
     if ~contains(Ref{ii}, "Anagnastou")
-    for jj = 1:numel(Stage{ii})
+    for jj = 1:numel(Age{ii})
         s = strsplit(Stage{ii}(jj),'/');
         idx = find(contains(GTS.Stage,s));
         gmst = [];
@@ -221,7 +222,32 @@ for ii = 1:numel(Ref)
     end   
     end
 end
-
+elseif ~isempty(GMST) && ~iscell(GMST)
+PhanDA = [];
+Lit = [];
+Ridx = strings(0,0);
+for ii = 1:numel(Ref)
+    if ~contains(Ref{ii}, "Anagnastou")
+    for jj = 1:numel(Age{ii})
+        idx = find(GTS >= min(Age{ii}{jj}) & GTS <= max(Age{ii}{jj}));
+        gmst = GMST(idx,:);
+        PhanDA(end+1,:) = [min(gmst(:)),median(gmst(:,2)),max(gmst(:))];
+        Lit(end+1,:) = Temp{ii}{jj}(1,:);
+        Ridx(end+1,1) = Ref{ii};
+        if contains(Ref{ii}, "Burls")
+            PhanDA(end+1,:) = [min(gmst(:)),median(gmst(:,2)),max(gmst(:))];
+            Lit(end+1,:) = Temp{ii}{jj}(2,:);
+            Ridx(end,1) = strcat(Ref{ii},' all');
+            Ridx(end+1,1) = strcat(Ref{ii},' sst');
+        end
+    end   
+    end
+end    
+else
+    PhanDA = [];
+    Lit = [];
+    Ridx = [];
+end
 
 
 end

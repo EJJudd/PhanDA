@@ -78,15 +78,15 @@ for ii = 1:numel(tfn)
             'EdgeColor', 'none', 'FaceColor', PlotSpecs.Color(ii,:));
     end
 end
-ax1.FontSize=11;ax1.FontName='Arial';
+ax1.FontSize=11;ax1.FontName='helvetica';
 ylim([0 50])
 ax1.YTick = [0:5:40];
 geologictimescale(GTS.UpperBoundary(14),GTS.LowerBoundary(size(GMSTprior,1)),'normal','reverse',ax1,'standard','stages','off',10,1)    
-ylabel('Assimilated values (N)','FontName','Arial','FontWeight','bold','FontSize',13)
+ylabel('Assimilated values (N)','FontName','helvetica','FontWeight','bold','FontSize',13)
 Xtext = 470;
 Ytext = linspace(44,30,5);
 for ii = 1:numel(Ytext)
-    text(ax1, Xtext,Ytext(ii),PlotSpecs.Proxy(ii),'FontName','Arial',...
+    text(ax1, Xtext,Ytext(ii),PlotSpecs.Proxy(ii),'FontName','helvetica',...
         'FontSize',13,'FontWeight','bold','Color',PlotSpecs.Color(ii,:))
 end
 % (c) Map inset
@@ -114,7 +114,7 @@ for ii = 1:numel(tfn)
             'EdgeColor', 'none', 'FaceColor', PlotSpecs.Color(ii,:));
     end
 end
-ax3.FontSize=11;ax3.FontName='Arial';
+ax3.FontSize=11;ax3.FontName='helvetica';
 yt = ax3.YTick; yl = ax3.YLim;
 yyaxis left
 ax3.YTick=yt;ax3.YLim = yl;ax3.YTickLabel='';
@@ -122,7 +122,7 @@ geologictimescale(GTS.UpperBoundary(1),GTS.LowerBoundary(13),'normal','reverse',
 yyaxis right
 ax3.YTick = [0:25:150]; ax3.YTickLabel = [0:25:150];
 ylim(ax3,[-15 152]); ax3.TickLength = [0.02,0.05];
-ylabel('Assimilated values (N)','FontName','Arial','FontWeight','bold','FontSize',13)
+ylabel('Assimilated values (N)','FontName','helvetica','FontWeight','bold','FontSize',13)
 % (e) Plot prior GMST
 ax4 = axes('Position',[.07, .063, .76, .34]); hold on
 f = fill([GTS.Average(1:91);flipud(GTS.Average(1:91))],...
@@ -132,9 +132,9 @@ plot(GTS.Average(1:91),median(GMSTprior,2),'k-','LineWidth',2)
 yl = ylim; yt = ax4.YTick;
 geologictimescale(GTS.UpperBoundary(14),GTS.LowerBoundary(91),'normal',...
     'reverse',ax4,'standard','stages','off',5.5,1)    
-ax4.FontSize=11;ax4.FontName='Arial'; box on
-ylabel('Prior GMST (^oC)','FontName','Arial','FontWeight','bold','FontSize',13)
-xlabel('Age (Ma)','FontName','Arial','FontWeight','bold','FontSize',13)
+ax4.FontSize=11;ax4.FontName='helvetica'; box on
+ylabel('Prior GMST (^oC)','FontName','helvetica','FontWeight','bold','FontSize',13)
+xlabel('Age (Ma)','FontName','helvetica','FontWeight','bold','FontSize',13)
 % (f) Prior zoom
 ax5 = axes('Position',[.835, .063, .087, .34]); hold on
 ylim(yl)
@@ -145,19 +145,19 @@ f = fill([GTS.Average(1:91);flipud(GTS.Average(1:91))],...
 plot(GTS.Average(1:91),median(GMSTprior,2),'k-','LineWidth',2)
 geologictimescale(GTS.UpperBoundary(1),GTS.LowerBoundary(13),'normal',...
     'reverse',ax5,'standard','stages','off',5.5,2)    
-ax5.FontSize=11;ax5.FontName='Arial'; box on
+ax5.FontSize=11;ax5.FontName='helvetica'; box on
 yyaxis left, ax5.YTickLabel = [];ylim(ylim(ax4))
 yyaxis right
 ax5.YTick = yt; ax5.YTickLabel = yt;ax5.TickLength = [0.03,0.5];
-ylabel('Prior GMST (^oC)','FontName','Arial','FontWeight','bold','FontSize',13)
+ylabel('Prior GMST (^oC)','FontName','helvetica','FontWeight','bold','FontSize',13)
 % (g) Add labels
-text(ax1,Xtext+10,47.5,'A','FontName','Arial',...
+text(ax1,Xtext+10,47.5,'A','FontName','helvetica',...
     'FontSize',15,'FontWeight','bold','Color','k')
-text(ax1,375,47.5,'B','FontName','Arial',...
+text(ax1,375,47.5,'B','FontName','helvetica',...
     'FontSize',15,'FontWeight','bold','Color','k')
-text(ax4,Xtext+10,28,'C','FontName','Arial',...
+text(ax4,Xtext+10,28,'C','FontName','helvetica',...
     'FontSize',15,'FontWeight','bold','Color','k')
-% (h) Save figure
+%% (h) Save figure
 if savefig
     export_fig(gcf,[figdir,'/',figname],'-p0.01','-m5')
 end
