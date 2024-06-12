@@ -26,8 +26,7 @@ load("PhanerozoicCO2v9.mat", "PhanerozoicCO2")
 % PART 2: PRE-TREAT DATA
 % Select iterations to use
 pHCorr = ["ens","rec"];
-%swCorr = ["snowball", "veizer","off"];
-swCorr = "veizer";
+swCorr = ["snowball","off"];
 rMeth = ["low","medium","high"];
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
     contains(ItName,strcat("SeawaterCorr = ",swCorr)) & ...

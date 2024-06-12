@@ -6,7 +6,7 @@
 % Figure details
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures';
 figname = 'Fig4_CO2&Forcings.png';
-savefig = false;        
+savefig = true;        
 
 % Select colormap
 cm_grey = customcolormap(linspace(0,1,3),{'#515151','#B8B8B8','#ECECEC'},5);
