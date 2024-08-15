@@ -15,7 +15,7 @@ cm = hex2rgb({'#004F60','#0A9396','#c6c6c6','#CA6702','#9B2226'},1);
 % Directory details
 iCloud = '/Users/emilyjudd/Library/Mobile Documents/com~apple~CloudDocs';
 ensdir = [iCloud,'/ModelOutputs/AssimilationFiles_beta'];
-assdate = '27Jul2023';
+assdate = '21May2024';
 assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 load([assdir,'/InputWorkspaces/YYe.mat'])
@@ -50,7 +50,7 @@ Rvals.mg = [5e-3,5e-2,5e-1; ...
                 .1 .5 .9];
 % Define assimilation options
 Rmethod = "medium";
-snowballcorr = true;
+swcorr = "on";
 pHcorr = "rec";
 covanalysis = false;
 % Calculate prior
@@ -58,7 +58,7 @@ tasprior = kel2cel(ensusemeta.regrid("tas",ensusemat,'order',["lat";"lon"]));
 % Assemble Y, Ye, R
 [Yuse, Yeuse, Ruse, proxytype, paleolat, paleolon] = assembleYYeR( UPD.(stagelab), ...
         Y.(stagelab), Ye.(stagelab), Rvals, Assumptions.(stagelab), ...
-        pHcorr, snowballcorr, Rmethod, stageidx);
+        pHcorr, swcorr, Rmethod, stageidx);
 [Index, exprun, exps, explabs] = indexensemble(ensusemeta,stageidx);
 % Run assimilation
 [gmst, ltg, ltgsst, taspost, ~, Index] = runkf(ensusemeta, ensusemat, ...
