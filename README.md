@@ -11,7 +11,7 @@ This repository contains all the necessary scripts and functions to reproduce th
 
 Judd, E.J., Tierney, J.E., Lunt, D.J., Montañez, I.P., Huber, B.T., Wing, S.L., & Valdes, P.J. 
 A 485 million-year history of Earth's surface temperature. 
-*Science* (in revision).
+*Science* (accepted).
 
 
 ## Table of Contents
@@ -20,8 +20,9 @@ A 485 million-year history of Earth's surface temperature.
       <a href="#citation">Citation</a>
     </li>
     <li>
-      <a href="#overview">Overview</a>
-    </li>    <li>
+      <a href="#overview">Accessing GMST, LTG, and CO2</a>
+    </li>
+    <li>
       <a href="#resources">Resources</a>
       <ul>
         <li><a href="#model-priors">Model Priors</a></li>
@@ -51,15 +52,26 @@ A 485 million-year history of Earth's surface temperature.
 
 Judd, E.J., Tierney, J.E., Lunt, D.J., Montañez, I.P., Huber, B.T., Wing, S.L., & Valdes, P.J. 
 A 485 million-year history of Earth's surface temperature. 
-*Science* (in revision).
+*Science* (accepted).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<h2 id="overview" align="center"> Overview </h2>
+<h2 id="overview" align="center"> Accessing GMST, LTG, and CO2 </h2>
 
 This Read Me file provides instructions to run the PhanDA data assimilation. 
 
-If you are primarily interested in accessing the GMST and/or CO2 solutions, a csv file containing the 5th, 16th, 50th, 84th, and 95th percentiles of PhanDA's reconstructed GMST and CO2 can be found in the subfolder entitled 5_Outputs. That subfolder also contains a mat file with a table, `GMST`, that contains the full GMST ensemble for each of the different "Scenarios" presented in PhanDA (i.e., different global seawater oxygen isotope values, seawater pH correction methods, and R values). The first 6 columns provide age information, and the first 3 rows provide the specifics of each scenario. The column called "ScenarioAll" contains the full ensemble from all scenarios. For example, to reproduce the GMST percentiles in the csv file, you can use the following code:
+***If you are primarily interested in accessing the global mean surface temperature (GMST), CO2, and/or latitudinal temperature gradient (LTG) solutions:***
+  <ul>
+    <li>
+      <b>a csv file with the 5th, 16th, 50th, 84th, and 95th percentiles of PhanDA's reconstructed GMST and CO2 can be found in the subfolder entitled 5_Output</b> (<i>PhanDA_GMSTandCO2_percentiles.csv</i>)
+    </li>
+    <li>
+      <b>a folder containing csv files with the 5th, 16th, 50th, 84th, and 95th percentiles of PhanDA's reconstructed LTG for each of the 85 assimilated time slices can be found in the subfolder entitled 5_Outputs</b> (<i>LTG_perentiles</i>)
+    </li>
+  </ul>
+
+
+The Outputs subfolder also contains a mat file with two tables, `GMST` and `ScenarioInfo`, that contains the full GMST ensemble for each of the different "Scenarios" presented in PhanDA (i.e., different global seawater oxygen isotope values, seawater pH correction methods, and R values). The first 6 columns of the `GMST` table provide age information, and the column called "ScenarioAll" contains the full ensemble from all scenarios. For example, to reproduce the GMST percentiles in the csv file, you can use the following code:
 
 ```matlab
 %load the data
