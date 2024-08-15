@@ -87,7 +87,7 @@ pgmst = cell2mat(cellfun(@(x) prctile(x,p), GMST.ScenarioAll(4:end), 'UniformOut
 <h3 id="model-priors"> Model Priors </h3>
   <ul>
     <li>PhanDA utilizes HadCM3L model simulations</li>
-    <li>The priors are described in detail in Judd et al. (submitted)</li>
+    <li>The priors are described in detail in Judd et al. (accepted)</li>
     <li>The specific version of HadCM3L used and the model configuration is described in detail in <a href="https://doi.org/10.5194/cp-17-1483-2021">Valdes et al. (2021)</a></li>
     <li>The individual NetCDFs and a description of the file naming convention are available on <a href="https://doi.org/10.5281/zenodo.8237750">Zenodo</a></li>
   </ul>
