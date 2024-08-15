@@ -81,6 +81,7 @@ p = [5,16,50,84,95];
 % calculate the percentiles of GMST for all scenarios
 pgmst = cell2mat(cellfun(@(x) prctile(x,p), GMST.ScenarioAll(4:end), 'UniformOutput', false));
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <h2 id="resources" align="center"> Resources </h2>
 <h3 id="model-priors"> Model Priors </h3>
@@ -230,3 +231,6 @@ To run the data assimilation:
 </picture></br>
 
 The outcome of this step should be a new file `Output.mat` that contains the global mean surface temperature (`GMST`), latitudinal temperature gradient (`LTG`), latitudinal sea surface temperature gradient (`LTGsst`), globally gridded posterior percentiles (`TASpost`, 5th, 16th, 50th, 84th, and 95th), globally gridded prior percentiles (`TASprior`), and some additional variables that provide insight into the assimilation and will help with processing the results (`Index`, `Ndata`, `Nandata`, `ItName`, and `Rvals`).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
