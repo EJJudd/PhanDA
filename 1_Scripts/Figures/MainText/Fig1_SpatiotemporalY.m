@@ -13,7 +13,7 @@ PlotSpecs.Color = hex2rgb({'#004F60';'#0a9396';'#ffb703';'#ca6702';'#9b2226'},1)
 
 % PART 1: LOAD DATA
 % Directory details
-assdate = '27Jul2023';
+assdate = '21May2024';
 assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 load([assdir,'/InputWorkspaces/','YYe.mat'])
