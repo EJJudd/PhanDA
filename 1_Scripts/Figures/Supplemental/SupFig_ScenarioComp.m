@@ -1,10 +1,15 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Scenario Comparison  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sup. Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Figure details
 figdir = '/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/Figures';
 savefig = true;        
 
 % PART 1: LOAD DATA
 % Directory details
-assdate = '27Jul2023';
+assdate = '21May2024';
 assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 load([assdir,'/OutputWorkspaces/','Output.mat'],"GMST","Index","ItName")
@@ -15,61 +20,61 @@ load("GTS2020_PETM.mat","GTS")
 % Select iterations to use
 % (1a) pH: ens correction
 pHCorr = "ens";
-sbCorr = [true, false];
+swCorr = ["snowball", "off"];
 rMeth = ["low","medium","high"];
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GpH_ens = combineruns(GMST,idx,1);
 % (1b) pH: rec correction
 pHCorr = "rec";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GpH_rec = combineruns(GMST,idx,1);
 % (1c) pH: no correction
 pHCorr = "off";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GpH_off = combineruns(GMST,idx,1);
 % (2a) snowball: on correction
 pHCorr = ["ens","rec"];
-sbCorr = true;
+swCorr = "snowball";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 Gsb_on = combineruns(GMST,idx,1);
 % (2b) pH: no correction
-sbCorr = false;
+swCorr = "off";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 Gsb_off = combineruns(GMST,idx,1);
 % (3a) R: low
-sbCorr = [true, false];
+swCorr = ["snowball", "off"];
 rMeth = "low";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 Gr_low = combineruns(GMST,idx,1);
 % (3b) R: medium
 rMeth = "medium";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 Gr_med = combineruns(GMST,idx,1);
 % (3b) R: high
 rMeth = "high";
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 Gr_high = combineruns(GMST,idx,1);
 
 % (4) All
 rMeth = ["low","medium","high"];
 idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GMST = combineruns(GMST,idx,1);
 

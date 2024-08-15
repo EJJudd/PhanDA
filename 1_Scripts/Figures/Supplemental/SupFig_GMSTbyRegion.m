@@ -12,7 +12,7 @@ cm = hex2rgb({'#004F60','#0A9396','#c6c6c6','#CA6702','#9B2226'},1);
 
 % PART 1: LOAD DATA
 % Directory details
-assdate = '27Jul2023';
+assdate = '21May2024';
 assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 load([assdir,'/OutputWorkspaces/','Output.mat'],"GMST","LTG","ItName")
@@ -23,10 +23,10 @@ load("HadCM3Coordinates.mat")
 % PART 2: PRE-TREAT DATA
 % Select iterations to use
 pHCorr = ["ens","rec"];
-sbCorr = [true, false];
+swCorr = ["snowball","off"];
 rMeth = ["low","medium","high"];
-idx = contains(ItName,strcat("phCorr = ",string(pHCorr))) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GMST = combineruns(GMST,idx,1);
 LTG = combineruns(LTG,idx,2);
@@ -54,6 +54,7 @@ for ii = 1:numel(GMST)
     ltgsat(ii,:) = prctile(latweightgmst(xt,meandim)-latweightgmst(xp,meandim),p);
     tropsat(ii,:) = prctile(latweightgmst(xt,meandim),p);
 end
+
 %% MAKE FIGURE
 fig = figure('Units','inches','Position',[-22,5,8,6],'Color','w');
 tiledlayout(2,1,'Padding','none','TileSpacing','compact');
@@ -77,7 +78,7 @@ ylabel(['Tropical temperature (',char(176),'C)'],'FontName','Arial','FontSize',1
 xlabel('Age (Ma)','FontName','Arial','FontSize',13,'FontWeight','bold')
 
 box on
-% Save figure
+%% Save figure
 if savefig
-    export_fig(gcf,[figdir,'/Supplemental/','SupFig_GMSTbyRegion.png'],'-p0.01','-m5')
+    export_fig(gcf,[figdir,'/Supplemental/SupFig_GMSTbyRegion.png'],'-m5')
 end

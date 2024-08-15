@@ -5,7 +5,7 @@
 
 % PART 1: LOAD DATA
 % Directory details
-assdate = '27Jul2023';
+assdate = '21May2024';
 assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 % PART 1: LOAD DATA
@@ -20,10 +20,10 @@ lsmask = struct2cell(lsmask);
 % PART 2: PRE-TREAT DATA
 % Select iterations to use
 pHCorr = ["ens","rec"];
-sbCorr = [true, false];
+swCorr = ["snowball","off"];
 rMeth = ["low","medium","high"];
-idx = contains(ItName,strcat("phCorr = ",string(pHCorr))) & ...
-    contains(ItName,strcat("SnowballCorr = ",string(sbCorr))) & ...
+idx = contains(ItName,strcat("phCorr = ",pHCorr)) & ...
+    contains(ItName,strcat("SeawaterCorr = ",string(swCorr))) & ...
     contains(ItName,strcat("Rmethod = ",rMeth));
 GMST = combineruns(GMST,idx,1);
 LTG = combineruns(LTG,idx,2);

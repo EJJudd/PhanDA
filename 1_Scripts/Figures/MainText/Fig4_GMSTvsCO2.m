@@ -15,7 +15,7 @@ cm_col = hex2rgb(['#0a9396';'#ffb703';'#ca6702'],1);
 % PART 1: LOAD DATA
 % Directory details
 assdate = '21May2024';
-assdir = ['/Users/emilyjudd/Documents/PhanDA/5_Outputs/AssimilationOutputs/PhanerozoicDA_',assdate];
+assdir = ['/Users/emilyjudd/Library/CloudStorage/OneDrive-SyracuseUniversity/PhanTASTIC/AssimilationOutputs/PhanerozoicDA_',assdate];
 % Load data
 load([assdir,'/OutputWorkspaces/','Output.mat'],"GMST","Ndata","Index","ItName")
 load([assdir,'/InputWorkspaces/','YYe.mat'],"Preferences")
