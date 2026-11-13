@@ -234,3 +234,4 @@ The outcome of this step should be a new file `Output.mat` that contains the glo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+[![License: CC BY 4.0](https://shields.io)](https://creativecommons.org)
